@@ -19,10 +19,6 @@ graph_mashups = []
 cursor = None
 paused = False
 
-# Redundant merging
-# red_idx = None
-# g_mashup = None
-
 # Final feedback
 feedback_given = False
 
@@ -32,8 +28,6 @@ def main():
     global graph_mashups
     global cursor
     global paused
-    global red_idx
-    global g_mashup
     global feedback_given
 
     data = request.get_json()
@@ -130,25 +124,6 @@ def main():
             nx.draw_networkx(m.graph)
             plt.savefig('dump/' + str(now) + '.png')
             plt.close('all')
-
-            # Compare any redundant triggers
-            # for i in range(len(graph_mashups)):
-            #     new_start = m.first
-            #     old_start = graph_mashups[i].first
-
-            #     if new_start.category == old_start.category:
-            #         red_idx = i
-            #         g_mashup = m
-
-            #         ret = {
-            #             "outputContexts": [
-            #                 {"name": "{}/contexts/finish_add_command-followup".format(data['session']),
-            #                  "lifespanCount": 2}
-            #             ],
-            #             "fulfillmentText": "It seems you already have a mashup with the same trigger, do you want me to merge with it?"
-            #         }
-
-            #         return jsonify(ret)
                     
             # If not redundant
             graph_mashups.append(m)
@@ -169,13 +144,7 @@ def main():
         
         ret['outputContexts'] = outputContexts
 
-        # Tell the generated mashup
-        # fulfillmentText = speak_mashup(graph_mashups[-1]) + ''
-
     if intent == 'finish_add_command - no' or intent == 'finish_add_command - yes - yes':
-        # graph_mashups.append(g_mashup)
-        # red_idx = None
-        # g_mashup = None
         now = int(datetime.now().timestamp())
         f = open('dump/' + str(now) + '.bin', 'wb+')
         pickle.dump(cursor, f)
@@ -193,27 +162,7 @@ def main():
             nx.draw_networkx(m.graph)
             plt.savefig('dump/' + str(now) + '.png')
             plt.close('all')
-
-            # Compare any redundant triggers
-            # for i in range(len(graph_mashups)):
-            #     new_start = m.first
-            #     old_start = graph_mashups[i].first
-
-            #     if new_start.category == old_start.category:
-            #         red_idx = i
-            #         g_mashup = m
-
-            #         ret = {
-            #             "outputContexts": [
-            #                 {"name": "{}/contexts/finish_add_command-followup".format(data['session']),
-            #                  "lifespanCount": 2}
-            #             ],
-            #             "fulfillmentText": "It seems you already have a mashup with the same trigger, do you want me to merge with it?"
-            #         }
-
-            #         return jsonify(ret)
                     
-            # If not redundant
             graph_mashups.append(m)
 
         except Exception as e:
@@ -232,24 +181,7 @@ def main():
         
         ret['outputContexts'] = outputContexts
 
-        # Tell the generated mashup
-        # fulfillmentText = speak_mashup(graph_mashups[-1]) + ''
-
-
     if intent == 'finish_add_command - yes':
-        # old_mashup = graph_mashups[red_idx]
-        # old_mashup.merge(g_mashup)
-        # red_idx = None
-        # g_mashup = None
-
-        # Save the merged mashup for debugging purpose
-        # now = int(datetime.now().timestamp())
-        # f = open('dump/' + str(now) + '.bin', 'wb+')
-        # pickle.dump(old_mashup, f)
-        # nx.draw_networkx(old_mashup.graph)
-        # plt.savefig('dump/' + str(now) + '.png')
-        # plt.close('all')
-        # f.close()
         now = int(datetime.now().timestamp())
         f = open('dump/' + str(now) + '-cur' + '.bin', 'wb+')
         pickle.dump(cursor, f)
