@@ -86,7 +86,7 @@ confirmDict = {
     'GPSEnterAreaTrigger': 'you enter the area. ',
     'GPSExitAreaTrigger': 'you leave the area. ',
     'EveryTimeTrigger': 'the time is ',
-    'WeatherConditionsTrigger': 'the weather condition has been met. ',
+    'WeatherConditionsTrigger': 'the weather condition is met. ',
     'ComputerTurnedOnTrigger': 'the computer is turned on. ',
     'ComputerTurnedOffTrigger': 'the computer is turned off. ',
     'VoiceCommandTrigger': 'the voice command is activated. '
@@ -163,7 +163,7 @@ def speak_add_command(m):
     if firstAppend:
         firstAppend = False
         
-        ret += "Got it, you can tell me if you have more to add, or just say I'm done."
+        ret += "Got it, tell me if you have more to add, or just say I'm done."
     else:
         responses = [
             "Okay, anything else to add?",

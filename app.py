@@ -62,7 +62,7 @@ def main():
             feedback_given = False
 
             ret['fulfillmentText'] = speak_add_command(m)
-            
+
         except Exception as e:
             print('[Error] Failed to instantiate the mashup - ' + str(e))
             cursor.pop()
@@ -203,7 +203,7 @@ def main():
                 ],
             }
 
-            fulfillmentText = speak_mashup(m) + 'Do you want me to generate your mashup?'
+            fulfillmentText = speak_mashup(m) + 'Do you want to generate your mashup?'
             ret['fulfillmentText'] = fulfillmentText
             feedback_given = True 
         except:
@@ -226,7 +226,7 @@ def main():
             m = Mashup()
             m.init_list(copy.deepcopy(cursor))
 
-            fulfillmentText = speak_mashup(m) + 'Is there anything you want to add?'
+            fulfillmentText = speak_mashup(m) + "tell me if you have more to add, or just say I'm done."
 
             ret['fulfillmentText'] = fulfillmentText
             feedback_given = True 

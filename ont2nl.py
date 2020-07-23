@@ -50,7 +50,7 @@ nlDict = {
     'GPSEnterAreaTrigger': 'you enter the area. ',
     'GPSExitAreaTrigger': 'you leave the area. ',
     'EveryTimeTrigger': 'the time is ',
-    'WeatherConditionsTrigger': 'the weather condition has been met. ',
+    'WeatherConditionsTrigger': 'the weather condition is met. ',
     'ComputerTurnedOnTrigger': 'the computer is turned on. ',
     'ComputerTurnedOffTrigger': 'the computer is turned off. ',
     'VoiceCommandTrigger': 'the voice command is activated. ',
