@@ -89,7 +89,7 @@ nlDict = {
     'TurnComputerOffAction': 'the computer will be turned off. '
 }
 
-
+# TODO: Double triggers are not supported.
 def speak_mashup(m):
     g = m.graph
     node = m.first

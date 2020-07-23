@@ -8,6 +8,7 @@ import pickle, copy
 
 from mashup import *
 from ont2nl import *
+from ont2confirm import *
 import matplotlib.pyplot as plt
 import networkx as nx
 
@@ -39,8 +40,7 @@ def main():
     if intent == 'new_mashup':
         if paused:
             ret = {
-                "fulfillmentText": "It looks like you haven't finished making a mashup, please resume it.",
-                "expectUserResponse": False
+                "fulfillmentText": "It seems you haven't finished making a mashup, please resume it."
             }
             outputContexts = data['queryResult']['outputContexts']
             
@@ -52,6 +52,7 @@ def main():
         
         mashups.append([])
         cursor = mashups[-1]
+        confirm_init()
     
     if intent == 'add_command':
         cursor.append(data['queryResult']['parameters'])
@@ -59,6 +60,9 @@ def main():
             m = Mashup()
             m.init_list(copy.deepcopy(mashups[-1]))
             feedback_given = False
+
+            ret['fulfillmentText'] = speak_add_command(m)
+            
         except Exception as e:
             print('[Error] Failed to instantiate the mashup - ' + str(e))
             cursor.pop()
