@@ -106,7 +106,7 @@ def main():
                     {"name": "{}/contexts/finish_add_command-followup".format(data['session']),
                      "lifespanCount": 2}
                 ],
-                "fulfillmentText": "Before I generate your mashup, do you want to check your current mashup?"
+                "fulfillmentText": "Okay, it's almost ready. Before I generate your mashup, do you want to check your current mashup?"
             }
 
             return jsonify(ret)
