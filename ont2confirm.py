@@ -123,7 +123,7 @@ def craft_trigger(node):
     return ret
 
 
-def speak_add_command(m):
+def speak_add_command(m, resp=True):
     global firstAppend
 
     g = m.graph
@@ -163,7 +163,7 @@ def speak_add_command(m):
     if firstAppend:
         firstAppend = False
         
-        ret += "Got it, tell me if you have more to add, or just say I'm done."
+        ret += "Got it, tell me if you have more commands to add, or just say I'm done."
     else:
         responses = [
             "Okay, anything else to add?",
@@ -172,7 +172,8 @@ def speak_add_command(m):
             "Sure, is there anything else?",
         ]
 
-        ret += random.choice(responses)
+        if resp:
+            ret += random.choice(responses)
 
     return ret
 

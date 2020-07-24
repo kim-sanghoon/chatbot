@@ -20,8 +20,9 @@ graph_mashups = []
 cursor = None
 paused = False
 
-# Final feedback
-feedback_given = False
+# Count of added commands from last current mashup check
+feedback_given = 0
+last_length = 0
 
 @app.route('/', methods=['POST'])
 def main():
@@ -30,6 +31,7 @@ def main():
     global cursor
     global paused
     global feedback_given
+    global last_length
 
     data = request.get_json()
     ret = {}
@@ -53,15 +55,25 @@ def main():
         mashups.append([])
         cursor = mashups[-1]
         confirm_init()
+        last_length = 0
     
     if intent == 'add_command':
         cursor.append(data['queryResult']['parameters'])
         try:
             m = Mashup()
             m.init_list(copy.deepcopy(mashups[-1]))
-            feedback_given = False
+            feedback_given += m.graph.number_of_nodes() - last_length
+            last_length = m.graph.number_of_nodes()
 
-            ret['fulfillmentText'] = speak_add_command(m)
+            ret['fulfillmentText'] = speak_add_command(m, False if feedback_given > 4 else True)
+
+            if feedback_given > 4:
+                ret["outputContexts"] = [
+                    {"name": "{}/contexts/add_command-followup".format(data['session']),
+                     "lifespanCount": 2}
+                ]
+                
+                ret["fulfillmentText"] += "Great. Before moving on to the next step, would you like to check the current progress of your mashup?"
 
         except Exception as e:
             print('[Error] Failed to instantiate the mashup - ' + str(e))
@@ -72,9 +84,8 @@ def main():
 
             return jsonify(ret)
 
-
     if intent == 'undo_command':
-        feedback_given = False
+        feedback_given += 1
         cursor.pop()
 
     if intent == 'pause_add_command':
@@ -100,13 +111,13 @@ def main():
 
             return jsonify(ret)
         
-        if not feedback_given:
+        if feedback_given > 2:
             ret = {
                 "outputContexts": [
                     {"name": "{}/contexts/finish_add_command-followup".format(data['session']),
                      "lifespanCount": 2}
                 ],
-                "fulfillmentText": "Okay, it's almost ready. Before I generate your mashup, do you want to check your current mashup?"
+                "fulfillmentText": "Okay, it's almost ready. Before I generate your mashup, do you want to check it out?"
             }
 
             return jsonify(ret)
@@ -205,7 +216,7 @@ def main():
 
             fulfillmentText = speak_mashup(m) + 'Do you want to generate your mashup?'
             ret['fulfillmentText'] = fulfillmentText
-            feedback_given = True 
+            feedback_given = 0 
         except:
             print('[Error] Failed to instantiate the mashup - ' + str(e))
             ret = {
@@ -215,7 +226,7 @@ def main():
 
             return jsonify(ret)
     
-    if intent == 'current_mashup':
+    if intent == 'current_mashup' or intent == 'add_command - yes':
         now = int(datetime.now().timestamp())
         f = open('dump/' + str(now) + '-cur' + '.bin', 'wb+')
         pickle.dump(cursor, f)
@@ -229,7 +240,8 @@ def main():
             fulfillmentText = speak_mashup(m) + "tell me if you have more to add, or just say I'm done."
 
             ret['fulfillmentText'] = fulfillmentText
-            feedback_given = True 
+            feedback_given = 0
+
         except Exception as e:
             print('[Error] Failed to instantiate the mashup - ' + str(e))
             ret = {
