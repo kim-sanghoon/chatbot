@@ -52,12 +52,18 @@ def main():
         
             ret['outputContexts'] = outputContexts
         
+        now = int(datetime.now().timestamp())
+        print('[INFO] New mashup session initiated at ' + str(int))
+
         mashups.append([])
         cursor = mashups[-1]
         confirm_init()
         last_length = 0
     
     if intent == 'add_command':
+        now = int(datetime.now().timestamp())
+        print('[INFO] Command added at ' + str(int))
+
         cursor.append(data['queryResult']['parameters'])
         try:
             m = Mashup()
@@ -68,6 +74,9 @@ def main():
             ret['fulfillmentText'] = speak_add_command(m, False if feedback_given > 4 else True)
 
             if feedback_given > 4:
+                now = int(datetime.now().timestamp())
+                print('[INFO] Feedback suggested at ' + str(int))
+
                 ret["outputContexts"] = [
                     {"name": "{}/contexts/add_command-followup".format(data['session']),
                      "lifespanCount": 2}
@@ -85,11 +94,15 @@ def main():
             return jsonify(ret)
 
     if intent == 'undo_command':
+        now = int(datetime.now().timestamp())
+        print('[INFO] Command undone at ' + str(int))
+
         feedback_given += 1
         cursor.pop()
 
     if intent == 'pause_add_command':
-        print('[INFO] Paused - ' + str(cursor))
+        now = int(datetime.now().timestamp())
+        print('[INFO] Paused at ' + str(int) + ' - ' + str(cursor))
         outputContexts = data['queryResult']['outputContexts']
         for context in outputContexts:
             context['lifespanCount'] = 0
@@ -98,7 +111,8 @@ def main():
         paused = True
     
     if intent == 'resume_add_command':
-        print('[INFO] Resumed - ' + str(cursor))
+        now = int(datetime.now().timestamp())
+        print('[INFO] Resumed at ' + str(int) + ' - ' + str(cursor))
         paused = False
 
     if intent == 'finish_add_command':
@@ -112,6 +126,9 @@ def main():
             return jsonify(ret)
         
         if feedback_given > 2:
+            now = int(datetime.now().timestamp())
+            print('[INFO] Feedback suggested at ' + str(int))
+            
             ret = {
                 "outputContexts": [
                     {"name": "{}/contexts/finish_add_command-followup".format(data['session']),
@@ -123,10 +140,10 @@ def main():
             return jsonify(ret)
 
         now = int(datetime.now().timestamp())
-        f = open('dump/' + str(now) + '.bin', 'wb+')
+        f = open('dump/multi-' + str(now) + '.bin', 'wb+')
         pickle.dump(cursor, f)
 
-        print('[INFO] New mashup created - ' + str(cursor))
+        print('[INFO] New mashup created at ' + str(now) + ' - ' + str(cursor))
 
         f.close()
         cursor = None
@@ -161,10 +178,10 @@ def main():
 
     if intent == 'finish_add_command - no' or intent == 'finish_add_command - yes - yes':
         now = int(datetime.now().timestamp())
-        f = open('dump/' + str(now) + '.bin', 'wb+')
+        f = open('dump/multi-' + str(now) + '.bin', 'wb+')
         pickle.dump(cursor, f)
 
-        print('[INFO] New mashup created - ' + str(cursor))
+        print('[INFO] New mashup created at ' + str(now) + ' - ' + str(cursor))
 
         f.close()
         cursor = None
@@ -198,7 +215,8 @@ def main():
 
     if intent == 'finish_add_command - yes':
         now = int(datetime.now().timestamp())
-        f = open('dump/' + str(now) + '-cur' + '.bin', 'wb+')
+        print('[INFO] Final feedback is provided at ' + str(int))
+        f = open('dump/multi-' + str(now) + '-cur' + '.bin', 'wb+')
         pickle.dump(cursor, f)
         f.close()
 
@@ -228,7 +246,10 @@ def main():
     
     if intent == 'current_mashup' or intent == 'add_command - yes':
         now = int(datetime.now().timestamp())
-        f = open('dump/' + str(now) + '-cur' + '.bin', 'wb+')
+        print('[INFO] Current feedback is provided at ' + str(int))
+
+        now = int(datetime.now().timestamp())
+        f = open('dump/multi-' + str(now) + '-cur' + '.bin', 'wb+')
         pickle.dump(cursor, f)
         f.close()
 
