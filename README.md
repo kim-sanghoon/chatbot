@@ -1,5 +1,8 @@
 # A Multi-Dialog Conversational Approach for Feature-Rich Services Mashup in IoT Environments
 
+### Note
+This branch is for the baseline (that is, single-utterance) agent.
+
 ### Testing Environment
 - Python 3.5 with Flask==1.1.2
 - Valid SSL certificate is required with filename of `server.crt` and `server.key`.
