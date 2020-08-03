@@ -95,7 +95,7 @@ def speak_mashup(m):
     node = m.first
 
     ret = ""
-    initWords, i = ["If ", "First, ", "Second, ", "Third, ", "Next, ", "After that, ", "Then, ", "Finally, "], 0
+    initWords, i = ["If ", "Then "], 0
 
     while node is not None:
         ret, i = ret + initWords[i], i + 1 if i < len(initWords) else i
