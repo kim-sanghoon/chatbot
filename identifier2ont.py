@@ -116,6 +116,8 @@ def id2trigger(_object, _action=''):
             '':'EveryTimeTrigger'
         },
         'weather': {
+            'enable': 'WeatherConditionsTrigger',
+            'disable': 'WeatherConditionsTrigger',
             '': 'WeatherConditionsTrigger'
         },
         'computer': {
