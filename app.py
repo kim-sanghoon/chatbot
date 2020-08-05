@@ -154,7 +154,7 @@ def main():
             m.init_list(copy.deepcopy(mashups[-1]))
 
             nx.draw_networkx(m.graph)
-            plt.savefig('dump/' + str(now) + '.png')
+            plt.savefig('dump/multi-' + str(now) + '.png')
             plt.close('all')
                     
             # If not redundant
@@ -192,7 +192,7 @@ def main():
             m.init_list(copy.deepcopy(mashups[-1]))
 
             nx.draw_networkx(m.graph)
-            plt.savefig('dump/' + str(now) + '.png')
+            plt.savefig('dump/multi-' + str(now) + '.png')
             plt.close('all')
                     
             graph_mashups.append(m)
