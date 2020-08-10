@@ -53,7 +53,7 @@ def main():
             ret['outputContexts'] = outputContexts
         
         now = int(datetime.now().timestamp())
-        print('[INFO] New mashup session initiated at ' + str(int))
+        print('[INFO] New mashup session initiated at ' + str(now))
 
         mashups.append([])
         cursor = mashups[-1]
@@ -62,7 +62,7 @@ def main():
     
     if intent == 'add_command':
         now = int(datetime.now().timestamp())
-        print('[INFO] Command added at ' + str(int))
+        print('[INFO] Command added at ' + str(now))
 
         cursor.append(data['queryResult']['parameters'])
         try:
@@ -75,7 +75,7 @@ def main():
 
             if feedback_given > 4:
                 now = int(datetime.now().timestamp())
-                print('[INFO] Feedback suggested at ' + str(int))
+                print('[INFO] Feedback suggested at ' + str(now))
 
                 ret["outputContexts"] = [
                     {"name": "{}/contexts/add_command-followup".format(data['session']),
@@ -95,14 +95,14 @@ def main():
 
     if intent == 'undo_command':
         now = int(datetime.now().timestamp())
-        print('[INFO] Command undone at ' + str(int))
+        print('[INFO] Command undone at ' + str(now))
 
         feedback_given += 1
         cursor.pop()
 
     if intent == 'pause_add_command':
         now = int(datetime.now().timestamp())
-        print('[INFO] Paused at ' + str(int) + ' - ' + str(cursor))
+        print('[INFO] Paused at ' + str(now) + ' - ' + str(cursor))
         outputContexts = data['queryResult']['outputContexts']
         for context in outputContexts:
             context['lifespanCount'] = 0
@@ -112,7 +112,7 @@ def main():
     
     if intent == 'resume_add_command':
         now = int(datetime.now().timestamp())
-        print('[INFO] Resumed at ' + str(int) + ' - ' + str(cursor))
+        print('[INFO] Resumed at ' + str(now) + ' - ' + str(cursor))
         paused = False
 
     if intent == 'finish_add_command':
@@ -127,7 +127,7 @@ def main():
         
         if feedback_given > 2:
             now = int(datetime.now().timestamp())
-            print('[INFO] Feedback suggested at ' + str(int))
+            print('[INFO] Feedback suggested at ' + str(now))
             
             ret = {
                 "outputContexts": [
@@ -215,7 +215,7 @@ def main():
 
     if intent == 'finish_add_command - yes':
         now = int(datetime.now().timestamp())
-        print('[INFO] Final feedback is provided at ' + str(int))
+        print('[INFO] Final feedback is provided at ' + str(now))
         f = open('dump/multi-' + str(now) + '-cur' + '.bin', 'wb+')
         pickle.dump(cursor, f)
         f.close()
@@ -246,7 +246,7 @@ def main():
     
     if intent == 'current_mashup' or intent == 'add_command - yes':
         now = int(datetime.now().timestamp())
-        print('[INFO] Current feedback is provided at ' + str(int))
+        print('[INFO] Current feedback is provided at ' + str(now))
 
         now = int(datetime.now().timestamp())
         f = open('dump/multi-' + str(now) + '-cur' + '.bin', 'wb+')
