@@ -4,7 +4,7 @@ from flask import Flask
 from flask import request, jsonify
 
 from datetime import datetime
-import pickle, copy
+import pickle, copy, random
 
 from mashup import *
 from ont2nl import *
@@ -24,6 +24,9 @@ paused = False
 feedback_given = 0
 last_length = 0
 
+# Undo check
+undo_used = False
+
 @app.route('/', methods=['POST'])
 def main():
     global mashups
@@ -32,6 +35,7 @@ def main():
     global paused
     global feedback_given
     global last_length
+    global undo_used
 
     data = request.get_json()
     ret = {}
@@ -58,7 +62,9 @@ def main():
         mashups.append([])
         cursor = mashups[-1]
         confirm_init()
+        feedback_given = 0
         last_length = 0
+        undo_used = False
     
     if intent == 'add_command':
         now = int(datetime.now().timestamp())
@@ -84,11 +90,13 @@ def main():
                 
                 ret["fulfillmentText"] += "Great. Before moving on to the next step, would you like to check the current progress of your mashup?"
 
+                feedback_given = 0
+
         except Exception as e:
             print('[Error] Failed to instantiate the mashup - ' + str(e))
             cursor.pop()
             ret = {
-                "fulfillmentText": "Oops, your input is not yet supported by the agent. Could you try with other commands?",
+                "fulfillmentText": "Oops, your input is not supported by the agent. Could you rephrase it?",
             }
 
             return jsonify(ret)
@@ -98,7 +106,24 @@ def main():
         print('[INFO] Command undone at ' + str(now))
 
         feedback_given += 1
-        cursor.pop()
+
+        try:
+            cursor.pop()
+        except IndexError as e:
+            print('[Error] Failed to pop a command - ' + str(e))
+            ret['fulfillmentText'] = 'Sorry, you cannot undo when you did not add any commands.'
+
+            return jsonify(ret)
+
+        if not undo_used:
+            undo_used = True
+            ret['fulfillmentText'] = 'Sure, the last command has been undone. Please tell me commands you want to add.'
+        else:
+            ret_str = [
+                'Removing the last action.',
+                'Undoing the last action.'
+            ]
+            ret['fulfillmentText'] = random.choice(ret_str)
 
     if intent == 'pause_add_command':
         now = int(datetime.now().timestamp())
@@ -120,7 +145,9 @@ def main():
         if len(cursor) == 0:
             ret = {
                 "fulfillmentText": "Umm... Nothing has been added.",
-                "expectUserResponse": False
+                "payload": {
+                    'google': {'expectUserResponse': False}
+                }
             }
 
             return jsonify(ret)
@@ -129,15 +156,19 @@ def main():
             now = int(datetime.now().timestamp())
             print('[INFO] Feedback suggested at ' + str(now))
             
-            ret = {
-                "outputContexts": [
-                    {"name": "{}/contexts/finish_add_command-followup".format(data['session']),
-                     "lifespanCount": 2}
-                ],
-                "fulfillmentText": "Okay, it's almost ready. Before I generate your mashup, do you want to check it out?"
-            }
+            outputContexts = data['queryResult']['outputContexts']
+            for context in outputContexts:
+                if 'finish_add_command-followup' not in context['name']:
+                    context['lifespanCount'] = 0
+            
+            ret['outputContexts'] = outputContexts
+            ret["fulfillmentText"] = "Okay, it's almost ready. Before I deploy your mashup, do you want to check it out?"
 
             return jsonify(ret)
+        else:
+            ret['payload'] = {
+                'google': {'expectUserResponse': False}
+            }
 
         now = int(datetime.now().timestamp())
         f = open('dump/multi-' + str(now) + '.bin', 'wb+')
@@ -164,7 +195,9 @@ def main():
             print('[Error] Failed to instantiate the mashup - ' + str(e))
             ret = {
                 "fulfillmentText": "Sorry, something strange has occurred while processing your input.",
-                "expectUserResponse": False
+                "payload": {
+                    'google': {'expectUserResponse': False}
+                }
             }
 
             return jsonify(ret)
@@ -201,7 +234,9 @@ def main():
             print('[Error] Failed to instantiate the mashup - ' + str(e))
             ret = {
                 "fulfillmentText": "Sorry, something strange has occurred while processing your input.",
-                "expectUserResponse": False
+                "payload": {
+                    'google': {'expectUserResponse': False}
+                }
             }
 
             return jsonify(ret)
@@ -232,14 +267,16 @@ def main():
                 ],
             }
 
-            fulfillmentText = speak_mashup(m) + 'Do you want to generate your mashup?'
+            fulfillmentText = speak_mashup(m) + 'Do you want to deploy your mashup?'
             ret['fulfillmentText'] = fulfillmentText
             feedback_given = 0 
         except:
             print('[Error] Failed to instantiate the mashup - ' + str(e))
             ret = {
                 "fulfillmentText": "Sorry. I got an error while checking the mashup command.",
-                "expectUserResponse": False
+                "payload": {
+                    'google': {'expectUserResponse': False}
+                }
             }
 
             return jsonify(ret)
@@ -258,7 +295,7 @@ def main():
             m = Mashup()
             m.init_list(copy.deepcopy(cursor))
 
-            fulfillmentText = speak_mashup(m) + "tell me if you have more to add, or just say I'm done."
+            fulfillmentText = speak_mashup(m) + " Tell me if you have more to add, or just say I'm done."
 
             ret['fulfillmentText'] = fulfillmentText
             feedback_given = 0
@@ -267,7 +304,9 @@ def main():
             print('[Error] Failed to instantiate the mashup - ' + str(e))
             ret = {
                 "fulfillmentText": "Sorry. I got an error while checking the mashup command.",
-                "expectUserResponse": False
+                "payload": {
+                    'google': {'expectUserResponse': False}
+                }
             }
 
             return jsonify(ret)

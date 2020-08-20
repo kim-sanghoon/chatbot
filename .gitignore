@@ -4,3 +4,4 @@
 certbot-auto
 server.crt
 server.key
+nohup.out

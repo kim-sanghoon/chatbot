@@ -21,9 +21,9 @@ confirmDict = {
     'DisableHeatingSystemAction': 'Turning the heater off',
     'StartWatchingTvAction': 'Turning the TV on',
     'StopWatchingTvAction': 'Turning the TV off',
-    'EnableShadingSystemAction': 'Closing the shade',
-    'DisableShadingSystemAction': 'Opening the shade',
-    'SetShadingAction': 'Changing the shade position',
+    'EnableShadingSystemAction': 'Closing the curtain',
+    'DisableShadingSystemAction': 'Opening the curtain',
+    'SetShadingAction': 'Changing the curtain position',
     'EnableLightingSystemAction': 'Turning the lights on',
     'DisableLightingSystemAction': 'Turning the lights off',
     'SetLightingAction': 'Changing the light setting',
@@ -34,8 +34,8 @@ confirmDict = {
     'CloseWindowFrameAction': 'Closing the windows',
     'EnableSecuritySystemAction': 'Activating the security system',
     'DisableSecuritySystemAction': 'Deactivating the security system',
-    'AddAlarmAction': 'Adding an alarm',
-    'TurnAlarmOffAction': 'Turning the alarm off',
+    'AddAlarmAction': 'Adding a notification',
+    'TurnAlarmOffAction': 'Turning the notification off',
     'StartListeningMusicAction': 'Start playing the audio',
     'StopListeningMusicAction': 'Stop playing the audio',
     'IncreaseVolumeAction': 'Increasing the volume',
@@ -59,9 +59,9 @@ confirmDict = {
     'HeatingSystemDisabledTrigger': 'the heater is turned off. ',
     'StartedWatchingTvTrigger': 'the TV is turned on. ',
     'StoppedWatchingTvTrigger': 'the TV is turned off. ',
-    'ShadingSystemEnabledTrigger': 'the shade is closed. ',
-    'ShadingSystemDisabledTrigger': 'the shade is opened. ',
-    'ShadeSetToTrigger': 'the shade position is changed. ',
+    'ShadingSystemEnabledTrigger': 'the curtain is closed. ',
+    'ShadingSystemDisabledTrigger': 'the curtain is opened. ',
+    'ShadeSetToTrigger': 'the curtain position is changed. ',
     'LightingSystemEnabledTrigger': 'the lights are turned on. ',
     'LightingSystemDisabledTrigger': 'the lights are turned off. ',
     'SensedLightingIncreasedTrigger': 'the lights are bright. ',
@@ -73,8 +73,8 @@ confirmDict = {
     'WindowFrameClosedTrigger': 'the windows are closed. ',
     'SecuritySystemEnabledTrigger': 'the security system is activated. ',
     'SecuritySystemDisabledTrigger': 'the security system is deactivated. ',
-    'AddedAlarmTrigger': 'an alarm is added. ',
-    'DeletedAlarmTrigger': 'an alarm is deleted. ',
+    'AddedAlarmTrigger': 'a notification is added. ',
+    'DeletedAlarmTrigger': 'a notification is deleted. ',
     'SensedNoiseLevelIncreasedTrigger': 'noise becomes loud. ',
     'SensedNoiseLevelDecreasedTrigger': 'noise becomes quiet. ',
     'SensedAirPressureIncreasedTrigger': 'the air pressure is high. ',
@@ -163,7 +163,7 @@ def speak_add_command(m, resp=True):
     if firstAppend:
         firstAppend = False
         
-        ret += "Got it, tell me if you have more commands to add, or just say I'm done."
+        ret += " Got it, tell me if you have more commands to add, or just say I'm done."
     else:
         responses = [
             "Okay, anything else to add?",
