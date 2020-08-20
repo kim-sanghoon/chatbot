@@ -1,0 +1,632 @@
+ * Serving Flask app "app" (lazy loading)
+ * Environment: production
+   WARNING: This is a development server. Do not use it in a production deployment.
+   Use a production WSGI server instead.
+ * Debug mode: off
+Traceback (most recent call last):
+  File "./app.py", line 132, in <module>
+    app.run(host='0.0.0.0', port=444, ssl_context=('server.crt', 'server.key'))
+  File "/home/seiker/.local/lib/python3.5/site-packages/flask/app.py", line 990, in run
+    run_simple(host, port, self, **options)
+  File "/home/seiker/.local/lib/python3.5/site-packages/werkzeug/serving.py", line 1052, in run_simple
+    inner()
+  File "/home/seiker/.local/lib/python3.5/site-packages/werkzeug/serving.py", line 1005, in inner
+    fd=fd,
+  File "/home/seiker/.local/lib/python3.5/site-packages/werkzeug/serving.py", line 848, in make_server
+    host, port, app, request_handler, passthrough_errors, ssl_context, fd=fd
+  File "/home/seiker/.local/lib/python3.5/site-packages/werkzeug/serving.py", line 766, in __init__
+    self.socket = ssl_context.wrap_socket(sock, server_side=True)
+  File "/home/seiker/.local/lib/python3.5/site-packages/werkzeug/serving.py", line 661, in wrap_socket
+    **kwargs
+  File "/usr/lib/python3.5/ssl.py", line 1069, in wrap_socket
+    ciphers=ciphers)
+  File "/usr/lib/python3.5/ssl.py", line 691, in __init__
+    self._context.load_cert_chain(certfile, keyfile)
+FileNotFoundError: [Errno 2] No such file or directory
+ * Serving Flask app "app" (lazy loading)
+ * Environment: production
+   WARNING: This is a development server. Do not use it in a production deployment.
+   Use a production WSGI server instead.
+ * Debug mode: off
+ * Running on https://0.0.0.0:444/ (Press CTRL+C to quit)
+ * Serving Flask app "single" (lazy loading)
+ * Environment: production
+   WARNING: This is a development server. Do not use it in a production deployment.
+   Use a production WSGI server instead.
+ * Debug mode: off
+ * Running on https://0.0.0.0:444/ (Press CTRL+C to quit)
+[INFO] New mashup session initiated at 1597148239 - None
+64.233.172.240 - - [11/Aug/2020 21:17:19] "[37mPOST / HTTP/1.1[0m" 200 -
+{'time': '', 'pos_action': 'come', 'action': 'enable', 'object': ['audio'], 'any': '', 'position': ['if'], 'pos_object': 'self', 'params': ['then'], 'number': ''}
+64.233.172.242 - - [11/Aug/2020 21:17:31] "[37mPOST / HTTP/1.1[0m" 200 -
+[INFO] New mashup created at 1597148255 - [{'time': '', 'pos_action': 'come', 'action': 'enable', 'object': ['audio'], 'params': ['then'], 'any': '', 'position': ['if'], 'pos_object': 'self', 'number': ''}]
+{'time': '', 'pos_action': 'come', 'action': 'enable', 'object': ['audio'], 'any': '', 'position': ['if'], 'pos_object': 'self', 'params': ['then'], 'number': ''}
+64.233.172.240 - - [11/Aug/2020 21:17:36] "[37mPOST / HTTP/1.1[0m" 200 -
+[INFO] New mashup session initiated at 1597215427 - None
+66.249.83.51 - - [12/Aug/2020 15:57:07] "[37mPOST / HTTP/1.1[0m" 200 -
+{'time': '', 'pos_action': 'come', 'action': 'turn', 'object': ['light'], 'any': '', 'position': ['if'], 'pos_object': 'self', 'params': ['room then', 'on'], 'number': ''}
+66.249.83.51 - - [12/Aug/2020 15:57:18] "[37mPOST / HTTP/1.1[0m" 200 -
+[INFO] New mashup created at 1597215450 - [{'time': '', 'pos_action': 'come', 'action': 'turn', 'object': ['light'], 'params': ['room then', 'on'], 'any': '', 'position': ['if'], 'pos_object': 'self', 'number': ''}]
+{'time': '', 'pos_action': 'come', 'action': 'turn', 'object': ['light'], 'any': '', 'position': ['if'], 'pos_object': 'self', 'params': ['room then', 'on'], 'number': ''}
+66.249.83.53 - - [12/Aug/2020 15:57:30] "[37mPOST / HTTP/1.1[0m" 200 -
+[INFO] New mashup session initiated at 1597215488 - None
+66.249.83.49 - - [12/Aug/2020 15:58:08] "[37mPOST / HTTP/1.1[0m" 200 -
+{'time': '', 'pos_action': 'come', 'action': 'turn', 'object': ['computer'], 'any': '', 'position': ['if'], 'pos_object': 'self', 'params': ['room then', 'on'], 'number': ''}
+66.249.83.49 - - [12/Aug/2020 15:58:19] "[37mPOST / HTTP/1.1[0m" 200 -
+[INFO] New mashup created at 1597215510 - [{'time': '', 'pos_action': 'come', 'action': 'turn', 'object': ['computer'], 'params': ['room then', 'on'], 'any': '', 'position': ['if'], 'pos_object': 'self', 'number': ''}]
+{'time': '', 'pos_action': 'come', 'action': 'turn', 'object': ['computer'], 'any': '', 'position': ['if'], 'pos_object': 'self', 'params': ['room then', 'on'], 'number': ''}
+66.249.83.51 - - [12/Aug/2020 15:58:31] "[37mPOST / HTTP/1.1[0m" 200 -
+[INFO] New mashup session initiated at 1597215534 - None
+66.249.83.51 - - [12/Aug/2020 15:58:54] "[37mPOST / HTTP/1.1[0m" 200 -
+{'time': '', 'pos_action': 'come', 'action': 'turn', 'object': ['air conditioner'], 'any': '', 'position': ['if'], 'pos_object': 'self', 'params': ['room then', 'on'], 'number': ''}
+66.249.83.51 - - [12/Aug/2020 15:59:05] "[37mPOST / HTTP/1.1[0m" 200 -
+[INFO] New mashup created at 1597215557 - [{'time': '', 'pos_action': 'come', 'action': 'turn', 'object': ['air conditioner'], 'params': ['room then', 'on'], 'any': '', 'position': ['if'], 'pos_object': 'self', 'number': ''}]
+{'time': '', 'pos_action': 'come', 'action': 'turn', 'object': ['air conditioner'], 'any': '', 'position': ['if'], 'pos_object': 'self', 'params': ['room then', 'on'], 'number': ''}
+66.249.83.51 - - [12/Aug/2020 15:59:17] "[37mPOST / HTTP/1.1[0m" 200 -
+[INFO] New mashup session initiated at 1597215581 - None
+66.249.83.53 - - [12/Aug/2020 15:59:41] "[37mPOST / HTTP/1.1[0m" 200 -
+{'time': '', 'pos_action': 'enable', 'action': 'set', 'object': ['thermostat'], 'any': '', 'position': ['if', 'then'], 'pos_object': 'air conditioner', 'params': ['to 26 degrees'], 'number': ''}
+66.249.83.49 - - [12/Aug/2020 15:59:54] "[37mPOST / HTTP/1.1[0m" 200 -
+[INFO] New mashup created at 1597215606 - [{'time': '', 'pos_action': 'enable', 'action': 'set', 'object': ['thermostat'], 'params': ['to 26 degrees'], 'any': '', 'position': ['if', 'then'], 'pos_object': 'air conditioner', 'number': ''}]
+{'time': '', 'pos_action': 'enable', 'action': 'set', 'object': ['thermostat'], 'any': '', 'position': ['if', 'then'], 'pos_object': 'air conditioner', 'params': ['to 26 degrees'], 'number': ''}
+66.249.83.53 - - [12/Aug/2020 16:00:06] "[37mPOST / HTTP/1.1[0m" 200 -
+[INFO] New mashup session initiated at 1597215629 - None
+66.249.83.49 - - [12/Aug/2020 16:00:29] "[37mPOST / HTTP/1.1[0m" 200 -
+{'time': '', 'pos_action': 'leave', 'action': 'turn', 'object': ['light'], 'any': '', 'position': ['if'], 'pos_object': 'self', 'params': ['room then', 'off'], 'number': ''}
+66.249.83.51 - - [12/Aug/2020 16:00:39] "[37mPOST / HTTP/1.1[0m" 200 -
+[INFO] Mashup creation aborted at 1597215650 - [{'time': '', 'pos_action': 'leave', 'action': 'turn', 'object': ['light'], 'params': ['room then', 'off'], 'any': '', 'position': ['if'], 'pos_object': 'self', 'number': ''}]
+66.249.83.53 - - [12/Aug/2020 16:00:50] "[37mPOST / HTTP/1.1[0m" 200 -
+[INFO] New mashup session initiated at 1597294404 - None
+66.249.83.49 - - [13/Aug/2020 13:53:24] "[37mPOST / HTTP/1.1[0m" 200 -
+{'time': '', 'pos_action': 'come', 'action': 'turn', 'object': ['light'], 'any': '', 'position': ['if'], 'pos_object': 'self', 'params': ['on', 'the room'], 'number': ''}
+66.249.83.53 - - [13/Aug/2020 13:53:37] "[37mPOST / HTTP/1.1[0m" 200 -
+[INFO] New mashup created at 1597294430 - [{'time': '', 'pos_action': 'come', 'action': 'turn', 'object': ['light'], 'params': ['on', 'the room'], 'any': '', 'position': ['if'], 'pos_object': 'self', 'number': ''}]
+{'time': '', 'pos_action': 'come', 'action': 'turn', 'object': ['light'], 'any': '', 'position': ['if'], 'pos_object': 'self', 'params': ['on', 'the room'], 'number': ''}
+66.249.83.53 - - [13/Aug/2020 13:53:51] "[37mPOST / HTTP/1.1[0m" 200 -
+[INFO] New mashup session initiated at 1597295129 - None
+66.249.83.49 - - [13/Aug/2020 14:05:29] "[37mPOST / HTTP/1.1[0m" 200 -
+{'time': '', 'pos_action': 'leave', 'action': 'enable', 'object': ['security'], 'any': '', 'position': ['if'], 'pos_object': 'self', 'params': ['home'], 'number': ''}
+66.249.83.49 - - [13/Aug/2020 14:05:40] "[37mPOST / HTTP/1.1[0m" 200 -
+[INFO] New mashup created at 1597295151 - [{'time': '', 'pos_action': 'leave', 'action': 'enable', 'object': ['security'], 'params': ['home'], 'any': '', 'position': ['if'], 'pos_object': 'self', 'number': ''}]
+{'time': '', 'pos_action': 'leave', 'action': 'enable', 'object': ['security'], 'any': '', 'position': ['if'], 'pos_object': 'self', 'params': ['home'], 'number': ''}
+66.249.83.49 - - [13/Aug/2020 14:05:51] "[37mPOST / HTTP/1.1[0m" 200 -
+[INFO] New mashup session initiated at 1597296586 - None
+66.249.83.53 - - [13/Aug/2020 14:29:46] "[37mPOST / HTTP/1.1[0m" 200 -
+{'time': '', 'pos_action': '', 'action': 'enable', 'object': ['weather'], 'any': '', 'position': ['if'], 'pos_object': '', 'params': ['close the window'], 'number': ''}
+[Error] Failed to instantiate the mashup - [Error] Could not infer the trigger.
+66.249.83.49 - - [13/Aug/2020 14:29:57] "[37mPOST / HTTP/1.1[0m" 200 -
+{'time': '', 'pos_action': '', 'action': 'enable', 'object': ['weather'], 'any': '', 'position': ['if'], 'pos_object': '', 'params': ['close to Windows'], 'number': ''}
+[Error] Failed to instantiate the mashup - [Error] Could not infer the trigger.
+66.249.83.49 - - [13/Aug/2020 14:30:09] "[37mPOST / HTTP/1.1[0m" 200 -
+{'time': '', 'pos_action': "'", 'action': '', 'object': [], 'any': '', 'position': ['if'], 'pos_object': 'chatbot', 'params': [], 'number': ''}
+[Error] Failed to instantiate the mashup - list index out of range
+66.249.83.51 - - [13/Aug/2020 14:30:21] "[37mPOST / HTTP/1.1[0m" 200 -
+{'pos_action': '', 'time': '', 'number': '', 'object': ['window'], 'params': [], 'any': '', 'position': ['if'], 'pos_object': 'weather', 'action': 'close'}
+66.249.83.51 - - [13/Aug/2020 14:30:32] "[37mPOST / HTTP/1.1[0m" 200 -
+[INFO] New mashup created at 1597296644 - [{'time': '', 'pos_object': 'weather', 'action': 'close', 'object': ['window'], 'pos_action': '', 'any': '', 'position': ['if'], 'params': [], 'number': ''}]
+{'pos_action': '', 'time': '', 'number': '', 'object': ['window'], 'params': [], 'any': '', 'position': ['if'], 'pos_object': 'weather', 'action': 'close'}
+66.249.83.51 - - [13/Aug/2020 14:30:44] "[37mPOST / HTTP/1.1[0m" 200 -
+[INFO] New mashup session initiated at 1597296679 - None
+66.249.83.53 - - [13/Aug/2020 14:31:19] "[37mPOST / HTTP/1.1[0m" 200 -
+{'pos_action': '', 'time': '', 'number': '', 'object': ['shade'], 'params': [], 'any': '', 'position': ['if'], 'pos_object': 'weather', 'action': 'close'}
+66.249.83.51 - - [13/Aug/2020 14:31:28] "[37mPOST / HTTP/1.1[0m" 200 -
+[INFO] New mashup created at 1597296699 - [{'time': '', 'pos_object': 'weather', 'action': 'close', 'object': ['shade'], 'pos_action': '', 'any': '', 'position': ['if'], 'params': [], 'number': ''}]
+{'pos_action': '', 'time': '', 'number': '', 'object': ['shade'], 'params': [], 'any': '', 'position': ['if'], 'pos_object': 'weather', 'action': 'close'}
+66.249.83.51 - - [13/Aug/2020 14:31:39] "[37mPOST / HTTP/1.1[0m" 200 -
+[INFO] New mashup session initiated at 1597296718 - None
+66.249.83.53 - - [13/Aug/2020 14:31:58] "[37mPOST / HTTP/1.1[0m" 200 -
+{'pos_action': '', 'time': '', 'number': '', 'object': ['air conditioner'], 'params': [], 'any': '', 'position': ['if'], 'pos_object': 'weather', 'action': 'turn'}
+66.249.83.51 - - [13/Aug/2020 14:32:08] "[37mPOST / HTTP/1.1[0m" 200 -
+[INFO] Mashup creation aborted at 1597296740 - [{'time': '', 'pos_object': 'weather', 'action': 'turn', 'object': ['air conditioner'], 'pos_action': '', 'any': '', 'position': ['if'], 'params': [], 'number': ''}]
+66.249.83.51 - - [13/Aug/2020 14:32:20] "[37mPOST / HTTP/1.1[0m" 200 -
+[INFO] New mashup session initiated at 1597296758 - None
+66.249.83.49 - - [13/Aug/2020 14:32:38] "[37mPOST / HTTP/1.1[0m" 200 -
+{'pos_action': '', 'time': '', 'number': '', 'object': ['air conditioner'], 'params': [], 'any': '', 'position': ['if'], 'pos_object': 'weather', 'action': 'turn'}
+66.249.83.49 - - [13/Aug/2020 14:32:47] "[37mPOST / HTTP/1.1[0m" 200 -
+[INFO] Mashup creation aborted at 1597296779 - [{'time': '', 'pos_object': 'weather', 'action': 'turn', 'object': ['air conditioner'], 'pos_action': '', 'any': '', 'position': ['if'], 'params': [], 'number': ''}]
+66.249.83.51 - - [13/Aug/2020 14:32:59] "[37mPOST / HTTP/1.1[0m" 200 -
+[INFO] New mashup session initiated at 1597296799 - None
+66.249.83.51 - - [13/Aug/2020 14:33:19] "[37mPOST / HTTP/1.1[0m" 200 -
+{'pos_action': '', 'time': '', 'number': '', 'object': ['air conditioner'], 'params': [], 'any': '', 'position': ['if'], 'pos_object': 'weather', 'action': 'enable'}
+66.249.83.53 - - [13/Aug/2020 14:33:28] "[37mPOST / HTTP/1.1[0m" 200 -
+[INFO] New mashup created at 1597296820 - [{'time': '', 'pos_object': 'weather', 'action': 'enable', 'object': ['air conditioner'], 'pos_action': '', 'any': '', 'position': ['if'], 'params': [], 'number': ''}]
+{'pos_action': '', 'time': '', 'number': '', 'object': ['air conditioner'], 'params': [], 'any': '', 'position': ['if'], 'pos_object': 'weather', 'action': 'enable'}
+66.249.83.49 - - [13/Aug/2020 14:33:40] "[37mPOST / HTTP/1.1[0m" 200 -
+[INFO] New mashup session initiated at 1597296840 - None
+66.249.83.49 - - [13/Aug/2020 14:34:00] "[37mPOST / HTTP/1.1[0m" 200 -
+{'time': '', 'pos_action': '', 'action': 'set', 'object': ['thermostat'], 'any': '', 'position': ['if'], 'pos_object': 'weather', 'params': [], 'number': 26.0}
+66.249.83.51 - - [13/Aug/2020 14:34:10] "[37mPOST / HTTP/1.1[0m" 200 -
+[INFO] New mashup created at 1597296862 - [{'time': '', 'pos_action': '', 'action': 'set', 'object': ['thermostat'], 'params': [], 'any': '', 'position': ['if'], 'pos_object': 'weather', 'number': 26.0}]
+{'time': '', 'pos_action': '', 'action': 'set', 'object': ['thermostat'], 'any': '', 'position': ['if'], 'pos_object': 'weather', 'params': [], 'number': 26.0}
+66.249.83.49 - - [13/Aug/2020 14:34:22] "[37mPOST / HTTP/1.1[0m" 200 -
+[INFO] New mashup session initiated at 1597297925 - None
+66.249.83.51 - - [13/Aug/2020 14:52:05] "[37mPOST / HTTP/1.1[0m" 200 -
+{'pos_action': '', 'time': '2020-08-13T20:00:00+09:00', 'number': '', 'object': ['computer'], 'params': [], 'any': '', 'position': ['at'], 'pos_object': '', 'action': 'enable'}
+66.249.83.49 - - [13/Aug/2020 14:52:15] "[37mPOST / HTTP/1.1[0m" 200 -
+[INFO] New mashup created at 1597297948 - [{'time': '2020-08-13T20:00:00+09:00', 'pos_object': '', 'action': 'enable', 'object': ['computer'], 'pos_action': '', 'any': '', 'position': ['at'], 'params': [], 'number': ''}]
+{'pos_action': '', 'time': '2020-08-13T20:00:00+09:00', 'number': '', 'object': ['computer'], 'params': [], 'any': '', 'position': ['at'], 'pos_object': '', 'action': 'enable'}
+66.249.83.51 - - [13/Aug/2020 14:52:28] "[37mPOST / HTTP/1.1[0m" 200 -
+[INFO] New mashup session initiated at 1597297968 - None
+66.249.83.53 - - [13/Aug/2020 14:52:48] "[37mPOST / HTTP/1.1[0m" 200 -
+{'pos_action': '', 'time': '2020-08-13T20:00:00+09:00', 'number': '', 'object': ['TV'], 'params': [], 'any': '', 'position': ['at'], 'pos_object': '', 'action': 'disable'}
+66.249.83.53 - - [13/Aug/2020 14:52:57] "[37mPOST / HTTP/1.1[0m" 200 -
+[INFO] New mashup created at 1597297989 - [{'time': '2020-08-13T20:00:00+09:00', 'pos_object': '', 'action': 'disable', 'object': ['TV'], 'pos_action': '', 'any': '', 'position': ['at'], 'params': [], 'number': ''}]
+{'pos_action': '', 'time': '2020-08-13T20:00:00+09:00', 'number': '', 'object': ['TV'], 'params': [], 'any': '', 'position': ['at'], 'pos_object': '', 'action': 'disable'}
+66.249.83.53 - - [13/Aug/2020 14:53:09] "[37mPOST / HTTP/1.1[0m" 200 -
+[INFO] New mashup session initiated at 1597298011 - None
+66.249.83.53 - - [13/Aug/2020 14:53:31] "[37mPOST / HTTP/1.1[0m" 200 -
+{'pos_action': '', 'time': '2020-08-13T20:00:00+09:00', 'number': '', 'object': ['audio'], 'params': [], 'any': '', 'position': ['at'], 'pos_object': '', 'action': 'disable'}
+66.249.83.49 - - [13/Aug/2020 14:53:46] "[37mPOST / HTTP/1.1[0m" 200 -
+[INFO] New mashup created at 1597298038 - [{'time': '2020-08-13T20:00:00+09:00', 'pos_object': '', 'action': 'disable', 'object': ['audio'], 'pos_action': '', 'any': '', 'position': ['at'], 'params': [], 'number': ''}]
+{'pos_action': '', 'time': '2020-08-13T20:00:00+09:00', 'number': '', 'object': ['audio'], 'params': [], 'any': '', 'position': ['at'], 'pos_object': '', 'action': 'disable'}
+66.249.83.49 - - [13/Aug/2020 14:53:58] "[37mPOST / HTTP/1.1[0m" 200 -
+[INFO] New mashup session initiated at 1597298056 - None
+66.249.83.53 - - [13/Aug/2020 14:54:16] "[37mPOST / HTTP/1.1[0m" 200 -
+{'pos_action': '', 'time': '2020-08-13T20:00:00+09:00', 'number': '', 'object': ['shade'], 'params': [], 'any': '', 'position': ['at'], 'pos_object': '', 'action': 'close'}
+66.249.83.49 - - [13/Aug/2020 14:54:24] "[37mPOST / HTTP/1.1[0m" 200 -
+[INFO] New mashup created at 1597298076 - [{'time': '2020-08-13T20:00:00+09:00', 'pos_object': '', 'action': 'close', 'object': ['shade'], 'pos_action': '', 'any': '', 'position': ['at'], 'params': [], 'number': ''}]
+{'pos_action': '', 'time': '2020-08-13T20:00:00+09:00', 'number': '', 'object': ['shade'], 'params': [], 'any': '', 'position': ['at'], 'pos_object': '', 'action': 'close'}
+66.249.83.53 - - [13/Aug/2020 14:54:36] "[37mPOST / HTTP/1.1[0m" 200 -
+[INFO] New mashup session initiated at 1597298094 - None
+66.249.83.49 - - [13/Aug/2020 14:54:54] "[37mPOST / HTTP/1.1[0m" 200 -
+{'time': '2020-08-13T20:00:00+09:00', 'pos_action': '', 'action': 'turn', 'object': ['light'], 'any': '', 'position': ['at'], 'pos_object': '', 'params': ['off'], 'number': ''}
+66.249.83.51 - - [13/Aug/2020 14:55:02] "[37mPOST / HTTP/1.1[0m" 200 -
+[INFO] New mashup created at 1597298114 - [{'pos_object': '', 'action': 'turn', 'object': ['light'], 'params': ['off'], 'pos_action': '', 'any': '', 'position': ['at'], 'time': '2020-08-13T20:00:00+09:00', 'number': ''}]
+{'time': '2020-08-13T20:00:00+09:00', 'pos_action': '', 'action': 'turn', 'object': ['light'], 'any': '', 'position': ['at'], 'pos_object': '', 'params': ['off'], 'number': ''}
+66.249.83.53 - - [13/Aug/2020 14:55:14] "[37mPOST / HTTP/1.1[0m" 200 -
+[INFO] New mashup session initiated at 1597298135 - None
+66.249.83.51 - - [13/Aug/2020 14:55:35] "[37mPOST / HTTP/1.1[0m" 200 -
+{'time': '2020-08-13T20:00:00+09:00', 'pos_action': 'enable', 'action': 'does', 'any': '', 'object': ['security'], 'position': ['at'], 'pos_object': '', 'params': [], 'number': ''}
+[Error] Failed to instantiate the mashup - 'does'
+66.249.83.51 - - [13/Aug/2020 14:55:46] "[37mPOST / HTTP/1.1[0m" 200 -
+{'pos_action': '', 'time': '2020-08-13T20:00:00+09:00', 'number': '', 'object': ['security'], 'params': [], 'any': '', 'position': ['at'], 'pos_object': '', 'action': 'enable'}
+66.249.83.51 - - [13/Aug/2020 14:55:58] "[37mPOST / HTTP/1.1[0m" 200 -
+[INFO] New mashup created at 1597298170 - [{'time': '2020-08-13T20:00:00+09:00', 'pos_object': '', 'action': 'enable', 'object': ['security'], 'pos_action': '', 'any': '', 'position': ['at'], 'params': [], 'number': ''}]
+{'pos_action': '', 'time': '2020-08-13T20:00:00+09:00', 'number': '', 'object': ['security'], 'params': [], 'any': '', 'position': ['at'], 'pos_object': '', 'action': 'enable'}
+66.249.83.49 - - [13/Aug/2020 14:56:10] "[37mPOST / HTTP/1.1[0m" 200 -
+[INFO] New mashup session initiated at 1597298191 - None
+66.249.83.51 - - [13/Aug/2020 14:56:31] "[37mPOST / HTTP/1.1[0m" 200 -
+{'pos_action': '', 'time': '2020-08-13T20:00:00+09:00', 'number': '', 'object': ['self'], 'params': [], 'any': '', 'position': ['at'], 'pos_object': '', 'action': 'remind'}
+66.249.83.49 - - [13/Aug/2020 14:56:39] "[37mPOST / HTTP/1.1[0m" 200 -
+[INFO] New mashup created at 1597298211 - [{'time': '2020-08-13T20:00:00+09:00', 'pos_object': '', 'action': 'remind', 'object': ['self'], 'pos_action': '', 'any': '', 'position': ['at'], 'params': [], 'number': ''}]
+{'pos_action': '', 'time': '2020-08-13T20:00:00+09:00', 'number': '', 'object': ['self'], 'params': [], 'any': '', 'position': ['at'], 'pos_object': '', 'action': 'remind'}
+66.249.83.49 - - [13/Aug/2020 14:56:51] "[37mPOST / HTTP/1.1[0m" 200 -
+[INFO] New mashup session initiated at 1597302872 - None
+66.249.83.51 - - [13/Aug/2020 16:14:32] "[37mPOST / HTTP/1.1[0m" 200 -
+{'time': '', 'pos_action': 'leave', 'action': 'disable', 'object': ['light'], 'any': '', 'position': ['if'], 'pos_object': 'self', 'params': ['room'], 'number': ''}
+66.249.83.53 - - [13/Aug/2020 16:14:45] "[37mPOST / HTTP/1.1[0m" 200 -
+[INFO] New mashup created at 1597302897 - [{'time': '', 'pos_action': 'leave', 'action': 'disable', 'object': ['light'], 'params': ['room'], 'any': '', 'position': ['if'], 'pos_object': 'self', 'number': ''}]
+{'time': '', 'pos_action': 'leave', 'action': 'disable', 'object': ['light'], 'any': '', 'position': ['if'], 'pos_object': 'self', 'params': ['room'], 'number': ''}
+66.249.83.53 - - [13/Aug/2020 16:14:57] "[37mPOST / HTTP/1.1[0m" 200 -
+[INFO] New mashup session initiated at 1597302921 - None
+66.249.83.51 - - [13/Aug/2020 16:15:21] "[37mPOST / HTTP/1.1[0m" 200 -
+{'time': '', 'pos_action': 'leave', 'action': 'disable', 'object': ['computer'], 'any': '', 'position': ['if'], 'pos_object': 'self', 'params': ['wrong'], 'number': ''}
+66.249.83.53 - - [13/Aug/2020 16:15:30] "[37mPOST / HTTP/1.1[0m" 200 -
+[INFO] New mashup created at 1597302943 - [{'time': '', 'pos_action': 'leave', 'action': 'disable', 'object': ['computer'], 'params': ['wrong'], 'any': '', 'position': ['if'], 'pos_object': 'self', 'number': ''}]
+{'time': '', 'pos_action': 'leave', 'action': 'disable', 'object': ['computer'], 'any': '', 'position': ['if'], 'pos_object': 'self', 'params': ['wrong'], 'number': ''}
+66.249.83.51 - - [13/Aug/2020 16:15:44] "[37mPOST / HTTP/1.1[0m" 200 -
+[INFO] New mashup session initiated at 1597302988 - None
+66.249.83.51 - - [13/Aug/2020 16:16:28] "[37mPOST / HTTP/1.1[0m" 200 -
+{'time': '', 'pos_action': 'leave', 'action': 'disable', 'object': ['air conditioner'], 'any': '', 'position': ['if'], 'pos_object': 'self', 'params': ['room'], 'number': ''}
+66.249.83.51 - - [13/Aug/2020 16:16:36] "[37mPOST / HTTP/1.1[0m" 200 -
+[INFO] New mashup created at 1597303009 - [{'time': '', 'pos_action': 'leave', 'action': 'disable', 'object': ['air conditioner'], 'params': ['room'], 'any': '', 'position': ['if'], 'pos_object': 'self', 'number': ''}]
+{'time': '', 'pos_action': 'leave', 'action': 'disable', 'object': ['air conditioner'], 'any': '', 'position': ['if'], 'pos_object': 'self', 'params': ['room'], 'number': ''}
+66.249.83.49 - - [13/Aug/2020 16:16:49] "[37mPOST / HTTP/1.1[0m" 200 -
+[INFO] New mashup session initiated at 1597303801 - None
+66.249.83.49 - - [13/Aug/2020 16:30:01] "[37mPOST / HTTP/1.1[0m" 200 -
+{'time': '', 'pos_action': 'leave', 'action': 'enable', 'object': ['security'], 'any': '', 'position': ['if'], 'pos_object': 'self', 'params': ['room'], 'number': ''}
+66.249.83.53 - - [13/Aug/2020 16:30:10] "[37mPOST / HTTP/1.1[0m" 200 -
+[INFO] New mashup created at 1597303822 - [{'time': '', 'pos_action': 'leave', 'action': 'enable', 'object': ['security'], 'params': ['room'], 'any': '', 'position': ['if'], 'pos_object': 'self', 'number': ''}]
+{'time': '', 'pos_action': 'leave', 'action': 'enable', 'object': ['security'], 'any': '', 'position': ['if'], 'pos_object': 'self', 'params': ['room'], 'number': ''}
+66.249.83.53 - - [13/Aug/2020 16:30:22] "[37mPOST / HTTP/1.1[0m" 200 -
+[INFO] New mashup session initiated at 1597304317 - None
+66.249.83.53 - - [13/Aug/2020 16:38:37] "[37mPOST / HTTP/1.1[0m" 200 -
+{'time': '', 'pos_action': '', 'action': 'close', 'object': ['window'], 'params': [], 'any': '', 'position': [], 'pos_object': '', 'number': ''}
+66.249.83.51 - - [13/Aug/2020 16:38:44] "[37mPOST / HTTP/1.1[0m" 200 -
+[INFO] New mashup created at 1597304333 - [{'pos_action': '', 'pos_object': '', 'action': 'close', 'object': ['window'], 'position': [], 'any': '', 'params': [], 'time': '', 'number': ''}]
+{'time': '', 'pos_action': '', 'action': 'close', 'object': ['window'], 'params': [], 'any': '', 'position': [], 'pos_object': '', 'number': ''}
+66.249.83.51 - - [13/Aug/2020 16:38:54] "[37mPOST / HTTP/1.1[0m" 200 -
+[INFO] New mashup session initiated at 1597304452 - None
+66.249.83.49 - - [13/Aug/2020 16:40:52] "[37mPOST / HTTP/1.1[0m" 200 -
+{'time': '', 'pos_action': 's', 'action': 'close', 'object': [], 'any': '', 'position': ['if'], 'pos_object': "'", 'params': [], 'number': ''}
+[Error] Failed to instantiate the mashup - Not supported object - '
+66.249.83.49 - - [13/Aug/2020 16:41:00] "[37mPOST / HTTP/1.1[0m" 200 -
+{'pos_action': '', 'time': '', 'number': '', 'object': ['need'], 'params': [], 'any': '', 'position': ['if'], 'pos_object': 'weather', 'action': ''}
+[Error] Failed to instantiate the mashup - Not supported object - need
+66.249.83.51 - - [13/Aug/2020 16:41:10] "[37mPOST / HTTP/1.1[0m" 200 -
+{'pos_action': '', 'time': '', 'number': '', 'object': ['shade'], 'params': [], 'any': '', 'position': ['if'], 'pos_object': 'weather', 'action': 'close'}
+66.249.83.51 - - [13/Aug/2020 16:41:21] "[37mPOST / HTTP/1.1[0m" 200 -
+[INFO] New mashup created at 1597304492 - [{'time': '', 'pos_object': 'weather', 'action': 'close', 'object': ['shade'], 'pos_action': '', 'any': '', 'position': ['if'], 'params': [], 'number': ''}]
+{'pos_action': '', 'time': '', 'number': '', 'object': ['shade'], 'params': [], 'any': '', 'position': ['if'], 'pos_object': 'weather', 'action': 'close'}
+66.249.83.51 - - [13/Aug/2020 16:41:33] "[37mPOST / HTTP/1.1[0m" 200 -
+[INFO] New mashup session initiated at 1597304519 - None
+66.249.83.51 - - [13/Aug/2020 16:41:59] "[37mPOST / HTTP/1.1[0m" 200 -
+{'pos_action': '', 'time': '', 'number': '', 'object': ['air conditioner'], 'params': [], 'any': '', 'position': ['is'], 'pos_object': 'weather', 'action': 'enable'}
+66.249.83.49 - - [13/Aug/2020 16:42:07] "[37mPOST / HTTP/1.1[0m" 200 -
+[INFO] New mashup created at 1597304539 - [{'time': '', 'pos_object': 'weather', 'action': 'enable', 'object': ['air conditioner'], 'pos_action': '', 'any': '', 'position': ['is'], 'params': [], 'number': ''}]
+{'pos_action': '', 'time': '', 'number': '', 'object': ['air conditioner'], 'params': [], 'any': '', 'position': ['is'], 'pos_object': 'weather', 'action': 'enable'}
+66.249.83.51 - - [13/Aug/2020 16:42:19] "[37mPOST / HTTP/1.1[0m" 200 -
+[INFO] New mashup session initiated at 1597304562 - None
+66.249.83.51 - - [13/Aug/2020 16:42:42] "[37mPOST / HTTP/1.1[0m" 200 -
+{'time': '', 'pos_action': '', 'action': 'set', 'object': ['thermostat'], 'any': '', 'position': ['is'], 'pos_object': 'weather', 'params': [], 'number': 26.0}
+66.249.83.51 - - [13/Aug/2020 16:42:52] "[37mPOST / HTTP/1.1[0m" 200 -
+[INFO] New mashup created at 1597304583 - [{'time': '', 'pos_action': '', 'action': 'set', 'object': ['thermostat'], 'params': [], 'any': '', 'position': ['is'], 'pos_object': 'weather', 'number': 26.0}]
+{'time': '', 'pos_action': '', 'action': 'set', 'object': ['thermostat'], 'any': '', 'position': ['is'], 'pos_object': 'weather', 'params': [], 'number': 26.0}
+66.249.83.51 - - [13/Aug/2020 16:43:03] "[37mPOST / HTTP/1.1[0m" 200 -
+[INFO] New mashup session initiated at 1597305251 - None
+66.249.83.51 - - [13/Aug/2020 16:54:11] "[37mPOST / HTTP/1.1[0m" 200 -
+{'time': '2020-08-13T20:00:00+09:00', 'pos_action': '', 'action': 'turn', 'object': ['computer'], 'any': '', 'position': ['at'], 'pos_object': '', 'params': ['on'], 'number': ''}
+66.249.83.53 - - [13/Aug/2020 16:54:26] "[37mPOST / HTTP/1.1[0m" 200 -
+[INFO] New mashup created at 1597305279 - [{'pos_object': '', 'action': 'turn', 'object': ['computer'], 'params': ['on'], 'pos_action': '', 'any': '', 'position': ['at'], 'time': '2020-08-13T20:00:00+09:00', 'number': ''}]
+{'time': '2020-08-13T20:00:00+09:00', 'pos_action': '', 'action': 'turn', 'object': ['computer'], 'any': '', 'position': ['at'], 'pos_object': '', 'params': ['on'], 'number': ''}
+66.249.83.49 - - [13/Aug/2020 16:54:39] "[37mPOST / HTTP/1.1[0m" 200 -
+[INFO] New mashup session initiated at 1597305311 - None
+66.249.83.53 - - [13/Aug/2020 16:55:11] "[37mPOST / HTTP/1.1[0m" 200 -
+{'time': '2020-08-13T20:00:00+09:00', 'pos_action': '', 'action': 'turn', 'object': ['TV'], 'any': '', 'position': ['at'], 'pos_object': '', 'params': ['off'], 'number': ''}
+66.249.83.49 - - [13/Aug/2020 16:55:20] "[37mPOST / HTTP/1.1[0m" 200 -
+[INFO] New mashup created at 1597305333 - [{'pos_object': '', 'action': 'turn', 'object': ['TV'], 'params': ['off'], 'pos_action': '', 'any': '', 'position': ['at'], 'time': '2020-08-13T20:00:00+09:00', 'number': ''}]
+{'time': '2020-08-13T20:00:00+09:00', 'pos_action': '', 'action': 'turn', 'object': ['TV'], 'any': '', 'position': ['at'], 'pos_object': '', 'params': ['off'], 'number': ''}
+66.249.83.53 - - [13/Aug/2020 16:55:33] "[37mPOST / HTTP/1.1[0m" 200 -
+[INFO] New mashup session initiated at 1597305352 - None
+66.249.83.53 - - [13/Aug/2020 16:55:52] "[37mPOST / HTTP/1.1[0m" 200 -
+{'time': '', 'pos_action': '', 'action': 'turn', 'object': ['audio'], 'params': ['off'], 'any': '', 'position': [], 'pos_object': '', 'number': ''}
+66.249.83.51 - - [13/Aug/2020 16:56:00] "[37mPOST / HTTP/1.1[0m" 200 -
+[INFO] Mashup creation aborted at 1597305371 - [{'pos_action': '', 'pos_object': '', 'action': 'turn', 'object': ['audio'], 'position': [], 'any': '', 'params': ['off'], 'time': '', 'number': ''}]
+66.249.83.51 - - [13/Aug/2020 16:56:11] "[37mPOST / HTTP/1.1[0m" 200 -
+[INFO] New mashup session initiated at 1597305388 - None
+66.249.83.53 - - [13/Aug/2020 16:56:28] "[37mPOST / HTTP/1.1[0m" 200 -
+{'pos_action': '', 'time': '2020-08-13T20:00:00+09:00', 'number': '', 'object': ['audio'], 'params': [], 'any': '', 'position': ['at'], 'pos_object': '', 'action': 'disable'}
+66.249.83.53 - - [13/Aug/2020 16:56:45] "[37mPOST / HTTP/1.1[0m" 200 -
+[INFO] New mashup created at 1597305418 - [{'time': '2020-08-13T20:00:00+09:00', 'pos_object': '', 'action': 'disable', 'object': ['audio'], 'pos_action': '', 'any': '', 'position': ['at'], 'params': [], 'number': ''}]
+{'pos_action': '', 'time': '2020-08-13T20:00:00+09:00', 'number': '', 'object': ['audio'], 'params': [], 'any': '', 'position': ['at'], 'pos_object': '', 'action': 'disable'}
+66.249.83.49 - - [13/Aug/2020 16:56:58] "[37mPOST / HTTP/1.1[0m" 200 -
+[INFO] New mashup session initiated at 1597305441 - None
+66.249.83.49 - - [13/Aug/2020 16:57:21] "[37mPOST / HTTP/1.1[0m" 200 -
+{'pos_action': '', 'time': '2020-08-13T20:00:00+09:00', 'number': '', 'object': ['shade'], 'params': [], 'any': '', 'position': ['at'], 'pos_object': '', 'action': 'close'}
+66.249.83.49 - - [13/Aug/2020 16:57:28] "[37mPOST / HTTP/1.1[0m" 200 -
+[INFO] New mashup created at 1597305460 - [{'time': '2020-08-13T20:00:00+09:00', 'pos_object': '', 'action': 'close', 'object': ['shade'], 'pos_action': '', 'any': '', 'position': ['at'], 'params': [], 'number': ''}]
+{'pos_action': '', 'time': '2020-08-13T20:00:00+09:00', 'number': '', 'object': ['shade'], 'params': [], 'any': '', 'position': ['at'], 'pos_object': '', 'action': 'close'}
+66.249.83.51 - - [13/Aug/2020 16:57:40] "[37mPOST / HTTP/1.1[0m" 200 -
+[INFO] New mashup session initiated at 1597305486 - None
+66.249.83.51 - - [13/Aug/2020 16:58:06] "[37mPOST / HTTP/1.1[0m" 200 -
+{'pos_action': '', 'time': '2020-08-13T20:00:00+09:00', 'number': '', 'object': ['light'], 'params': [], 'any': '', 'position': ['at'], 'pos_object': '', 'action': 'disable'}
+66.249.83.49 - - [13/Aug/2020 16:58:13] "[37mPOST / HTTP/1.1[0m" 200 -
+[INFO] New mashup created at 1597305506 - [{'time': '2020-08-13T20:00:00+09:00', 'pos_object': '', 'action': 'disable', 'object': ['light'], 'pos_action': '', 'any': '', 'position': ['at'], 'params': [], 'number': ''}]
+{'pos_action': '', 'time': '2020-08-13T20:00:00+09:00', 'number': '', 'object': ['light'], 'params': [], 'any': '', 'position': ['at'], 'pos_object': '', 'action': 'disable'}
+66.249.83.49 - - [13/Aug/2020 16:58:26] "[37mPOST / HTTP/1.1[0m" 200 -
+[INFO] New mashup session initiated at 1597305523 - None
+66.249.83.49 - - [13/Aug/2020 16:58:43] "[37mPOST / HTTP/1.1[0m" 200 -
+{'pos_action': '', 'time': '2020-08-13T20:00:00+09:00', 'number': '', 'object': ['security'], 'params': [], 'any': '', 'position': ['at'], 'pos_object': '', 'action': 'enable'}
+66.249.83.51 - - [13/Aug/2020 16:58:52] "[37mPOST / HTTP/1.1[0m" 200 -
+[INFO] New mashup created at 1597305546 - [{'time': '2020-08-13T20:00:00+09:00', 'pos_object': '', 'action': 'enable', 'object': ['security'], 'pos_action': '', 'any': '', 'position': ['at'], 'params': [], 'number': ''}]
+{'pos_action': '', 'time': '2020-08-13T20:00:00+09:00', 'number': '', 'object': ['security'], 'params': [], 'any': '', 'position': ['at'], 'pos_object': '', 'action': 'enable'}
+66.249.83.53 - - [13/Aug/2020 16:59:06] "[37mPOST / HTTP/1.1[0m" 200 -
+[INFO] New mashup session initiated at 1597305563 - None
+66.249.83.51 - - [13/Aug/2020 16:59:23] "[37mPOST / HTTP/1.1[0m" 200 -
+{'pos_action': '', 'time': '2020-08-13T20:00:00+09:00', 'number': '', 'object': ['self'], 'params': [], 'any': '', 'position': ['at'], 'pos_object': '', 'action': 'remind'}
+66.249.83.53 - - [13/Aug/2020 16:59:32] "[37mPOST / HTTP/1.1[0m" 200 -
+[INFO] New mashup created at 1597305584 - [{'time': '2020-08-13T20:00:00+09:00', 'pos_object': '', 'action': 'remind', 'object': ['self'], 'pos_action': '', 'any': '', 'position': ['at'], 'params': [], 'number': ''}]
+{'pos_action': '', 'time': '2020-08-13T20:00:00+09:00', 'number': '', 'object': ['self'], 'params': [], 'any': '', 'position': ['at'], 'pos_object': '', 'action': 'remind'}
+66.249.83.53 - - [13/Aug/2020 16:59:44] "[37mPOST / HTTP/1.1[0m" 200 -
+[INFO] New mashup session initiated at 1597384470 - None
+66.249.83.51 - - [14/Aug/2020 14:54:30] "[37mPOST / HTTP/1.1[0m" 200 -
+{'time': '', 'pos_action': 'come', 'action': 'enable', 'object': ['audio'], 'any': '', 'position': ['if'], 'pos_object': 'self', 'params': ['then'], 'number': ''}
+66.249.83.53 - - [14/Aug/2020 14:54:41] "[37mPOST / HTTP/1.1[0m" 200 -
+[INFO] New mashup created at 1597384493 - [{'time': '', 'pos_action': 'come', 'action': 'enable', 'object': ['audio'], 'params': ['then'], 'any': '', 'position': ['if'], 'pos_object': 'self', 'number': ''}]
+{'time': '', 'pos_action': 'come', 'action': 'enable', 'object': ['audio'], 'any': '', 'position': ['if'], 'pos_object': 'self', 'params': ['then'], 'number': ''}
+66.249.83.55 - - [14/Aug/2020 14:54:53] "[37mPOST / HTTP/1.1[0m" 200 -
+[INFO] New mashup session initiated at 1597385638 - None
+66.249.83.53 - - [14/Aug/2020 15:13:58] "[37mPOST / HTTP/1.1[0m" 200 -
+{'time': '', 'pos_action': '', 'action': 'turn', 'object': ['security'], 'params': [], 'any': '', 'position': [], 'pos_object': '', 'number': ''}
+66.249.83.55 - - [14/Aug/2020 15:14:06] "[37mPOST / HTTP/1.1[0m" 200 -
+[INFO] New mashup created at 1597385657 - [{'pos_action': '', 'pos_object': '', 'action': 'turn', 'object': ['security'], 'position': [], 'any': '', 'params': [], 'time': '', 'number': ''}]
+{'time': '', 'pos_action': '', 'action': 'turn', 'object': ['security'], 'params': [], 'any': '', 'position': [], 'pos_object': '', 'number': ''}
+66.249.83.53 - - [14/Aug/2020 15:14:17] "[37mPOST / HTTP/1.1[0m" 200 -
+[INFO] New mashup session initiated at 1597386711 - None
+66.249.83.55 - - [14/Aug/2020 15:31:51] "[37mPOST / HTTP/1.1[0m" 200 -
+{'time': '', 'pos_action': 'enable', 'action': 'close', 'object': ['window'], 'any': '', 'position': ['if'], 'pos_object': 'weather', 'params': [], 'number': ''}
+66.249.83.55 - - [14/Aug/2020 15:32:02] "[37mPOST / HTTP/1.1[0m" 200 -
+{'time': '', 'pos_action': 'enable', 'action': 'close', 'object': ['window'], 'any': '', 'position': ['if'], 'pos_object': 'weather', 'params': [], 'number': ''}
+{'time': '', 'pos_action': '', 'action': 'close', 'object': ['shade'], 'any': '', 'position': ['then'], 'pos_object': '', 'params': [], 'number': ''}
+[Error] Failed to instantiate the mashup - list index out of range
+66.249.83.53 - - [14/Aug/2020 15:32:19] "[37mPOST / HTTP/1.1[0m" 200 -
+{'time': '', 'pos_action': 'enable', 'action': 'close', 'object': ['window'], 'any': '', 'position': ['if'], 'pos_object': 'weather', 'params': [], 'number': ''}
+{'time': '', 'pos_action': '', 'action': 'close', 'object': ['shade'], 'params': [], 'any': '', 'position': [], 'pos_object': '', 'number': ''}
+[Error] Failed to instantiate the mashup - list index out of range
+66.249.83.51 - - [14/Aug/2020 15:32:32] "[37mPOST / HTTP/1.1[0m" 200 -
+{'time': '', 'pos_action': 'enable', 'action': 'close', 'object': ['window'], 'any': '', 'position': ['if'], 'pos_object': 'weather', 'params': [], 'number': ''}
+{'time': '', 'pos_action': '', 'action': 'close', 'object': ['shade'], 'params': [], 'any': '', 'position': [], 'pos_object': '', 'number': ''}
+[Error] Failed to instantiate the mashup - list index out of range
+66.249.83.51 - - [14/Aug/2020 15:32:44] "[37mPOST / HTTP/1.1[0m" 200 -
+{'time': '', 'pos_action': 'enable', 'action': 'close', 'object': ['window'], 'any': '', 'position': ['if'], 'pos_object': 'weather', 'params': [], 'number': ''}
+{'time': '', 'pos_action': '', 'action': 'close', 'object': ['shade'], 'params': [], 'any': '', 'position': [], 'pos_object': '', 'number': ''}
+[Error] Failed to instantiate the mashup - list index out of range
+66.249.83.55 - - [14/Aug/2020 15:32:55] "[37mPOST / HTTP/1.1[0m" 200 -
+{'time': '', 'pos_action': 'enable', 'action': 'close', 'object': ['window'], 'any': '', 'position': ['if'], 'pos_object': 'weather', 'params': [], 'number': ''}
+{'time': '', 'pos_action': '', 'action': 'close', 'object': ['shade'], 'params': [], 'any': '', 'position': [], 'pos_object': '', 'number': ''}
+[Error] Failed to instantiate the mashup - list index out of range
+66.249.83.53 - - [14/Aug/2020 15:33:06] "[37mPOST / HTTP/1.1[0m" 200 -
+{'time': '', 'pos_action': 'enable', 'action': 'close', 'object': ['window'], 'any': '', 'position': ['if'], 'pos_object': 'weather', 'params': [], 'number': ''}
+{'time': '', 'pos_action': '', 'action': 'turn', 'object': ['air conditioner'], 'params': ['on'], 'any': '', 'position': [], 'pos_object': '', 'number': ''}
+[Error] Failed to instantiate the mashup - list index out of range
+66.249.83.55 - - [14/Aug/2020 15:33:16] "[37mPOST / HTTP/1.1[0m" 200 -
+{'time': '', 'pos_action': 'enable', 'action': 'close', 'object': ['window'], 'any': '', 'position': ['if'], 'pos_object': 'weather', 'params': [], 'number': ''}
+{'time': '', 'pos_action': '', 'action': 'set', 'object': ['thermostat'], 'params': ['to 26 degrees'], 'any': '', 'position': [], 'pos_object': '', 'number': ''}
+[Error] Failed to instantiate the mashup - list index out of range
+66.249.83.55 - - [14/Aug/2020 15:33:28] "[37mPOST / HTTP/1.1[0m" 200 -
+{'time': '', 'pos_action': 'enable', 'action': 'close', 'object': ['window'], 'any': '', 'position': ['if'], 'pos_object': 'weather', 'params': [], 'number': ''}
+{'time': '', 'pos_action': '', 'action': 'close', 'object': ['shade'], 'params': [], 'any': '', 'position': [], 'pos_object': '', 'number': ''}
+[Error] Failed to instantiate the mashup - list index out of range
+66.249.83.53 - - [14/Aug/2020 15:33:38] "[37mPOST / HTTP/1.1[0m" 200 -
+{'time': '', 'pos_action': 'enable', 'action': 'close', 'object': ['window'], 'any': '', 'position': ['if'], 'pos_object': 'weather', 'params': [], 'number': ''}
+{'time': '', 'pos_action': '', 'action': 'close', 'object': ['shade'], 'params': [], 'any': '', 'position': [], 'pos_object': '', 'number': ''}
+[Error] Failed to instantiate the mashup - list index out of range
+66.249.83.55 - - [14/Aug/2020 15:33:49] "[37mPOST / HTTP/1.1[0m" 200 -
+[INFO] New mashup session initiated at 1597386930 - [{'time': '', 'pos_action': 'enable', 'action': 'close', 'object': ['window'], 'params': [], 'any': '', 'position': ['if'], 'pos_object': 'weather', 'number': ''}]
+66.249.83.51 - - [14/Aug/2020 15:35:30] "[37mPOST / HTTP/1.1[0m" 200 -
+{'time': '', 'pos_action': 'enable', 'action': 'close', 'object': ['window'], 'any': '', 'position': ['if'], 'pos_object': 'weather', 'params': [], 'number': ''}
+66.249.83.51 - - [14/Aug/2020 15:35:40] "[37mPOST / HTTP/1.1[0m" 200 -
+{'time': '', 'pos_action': 'enable', 'action': 'close', 'object': ['window'], 'any': '', 'position': ['if'], 'pos_object': 'weather', 'params': [], 'number': ''}
+{'time': '', 'pos_action': '', 'action': 'close', 'object': ['shade'], 'any': '', 'position': ['then'], 'pos_object': '', 'params': [], 'number': ''}
+[Error] Failed to instantiate the mashup - list index out of range
+66.249.83.53 - - [14/Aug/2020 15:35:56] "[37mPOST / HTTP/1.1[0m" 200 -
+{'time': '', 'pos_action': 'enable', 'action': 'close', 'object': ['window'], 'any': '', 'position': ['if'], 'pos_object': 'weather', 'params': [], 'number': ''}
+{'time': '', 'pos_action': '', 'action': 'close', 'object': ['shade'], 'params': [], 'any': '', 'position': [], 'pos_object': '', 'number': ''}
+[Error] Failed to instantiate the mashup - list index out of range
+66.249.83.55 - - [14/Aug/2020 15:36:06] "[37mPOST / HTTP/1.1[0m" 200 -
+{'time': '', 'pos_action': 'enable', 'action': 'close', 'object': ['window'], 'any': '', 'position': ['if'], 'pos_object': 'weather', 'params': [], 'number': ''}
+{'time': '', 'pos_action': '', 'action': 'turn', 'object': ['air conditioner'], 'params': ['on'], 'any': '', 'position': [], 'pos_object': '', 'number': ''}
+[Error] Failed to instantiate the mashup - list index out of range
+66.249.83.53 - - [14/Aug/2020 15:36:16] "[37mPOST / HTTP/1.1[0m" 200 -
+[INFO] New mashup session initiated at 1597387112 - [{'time': '', 'pos_action': 'enable', 'action': 'close', 'object': ['window'], 'params': [], 'any': '', 'position': ['if'], 'pos_object': 'weather', 'number': ''}]
+66.249.83.51 - - [14/Aug/2020 15:38:32] "[37mPOST / HTTP/1.1[0m" 200 -
+{'time': '', 'pos_action': 'enable', 'action': 'close', 'object': ['window'], 'any': '', 'position': ['if'], 'pos_object': 'weather', 'params': [], 'number': ''}
+66.249.83.53 - - [14/Aug/2020 15:38:42] "[37mPOST / HTTP/1.1[0m" 200 -
+[INFO] New mashup created at 1597387133 - [{'time': '', 'pos_action': 'enable', 'action': 'close', 'object': ['window'], 'params': [], 'any': '', 'position': ['if'], 'pos_object': 'weather', 'number': ''}]
+{'time': '', 'pos_action': 'enable', 'action': 'close', 'object': ['window'], 'any': '', 'position': ['if'], 'pos_object': 'weather', 'params': [], 'number': ''}
+66.249.83.55 - - [14/Aug/2020 15:38:53] "[37mPOST / HTTP/1.1[0m" 200 -
+[INFO] New mashup session initiated at 1597387258 - None
+66.249.83.51 - - [14/Aug/2020 15:40:58] "[37mPOST / HTTP/1.1[0m" 200 -
+{'time': '', 'pos_action': '', 'action': 'close', 'object': ['shade'], 'params': [], 'any': '', 'position': [], 'pos_object': '', 'number': ''}
+66.249.83.51 - - [14/Aug/2020 15:41:07] "[37mPOST / HTTP/1.1[0m" 200 -
+[INFO] New mashup created at 1597387276 - [{'pos_action': '', 'pos_object': '', 'action': 'close', 'object': ['shade'], 'position': [], 'any': '', 'params': [], 'time': '', 'number': ''}]
+{'time': '', 'pos_action': '', 'action': 'close', 'object': ['shade'], 'params': [], 'any': '', 'position': [], 'pos_object': '', 'number': ''}
+66.249.83.55 - - [14/Aug/2020 15:41:16] "[37mPOST / HTTP/1.1[0m" 200 -
+[INFO] New mashup session initiated at 1597387298 - None
+66.249.83.53 - - [14/Aug/2020 15:41:38] "[37mPOST / HTTP/1.1[0m" 200 -
+{'time': '', 'pos_action': '', 'action': 'turn', 'object': ['air conditioner'], 'params': ['wall on'], 'any': '', 'position': [], 'pos_object': '', 'number': ''}
+66.249.83.53 - - [14/Aug/2020 15:41:47] "[37mPOST / HTTP/1.1[0m" 200 -
+[INFO] New mashup session initiated at 1597387379 - [{'pos_action': '', 'pos_object': '', 'action': 'turn', 'object': ['air conditioner'], 'position': [], 'any': '', 'params': ['wall on'], 'time': '', 'number': ''}]
+66.249.83.53 - - [14/Aug/2020 15:42:59] "[37mPOST / HTTP/1.1[0m" 200 -
+{'time': '', 'pos_action': '', 'action': 'enable', 'object': ['air conditioner'], 'params': ['on'], 'any': '', 'position': [], 'pos_object': '', 'number': ''}
+66.249.83.53 - - [14/Aug/2020 15:43:07] "[37mPOST / HTTP/1.1[0m" 200 -
+[INFO] New mashup created at 1597387397 - [{'pos_action': '', 'pos_object': '', 'action': 'enable', 'object': ['air conditioner'], 'position': [], 'any': '', 'params': ['on'], 'time': '', 'number': ''}]
+{'time': '', 'pos_action': '', 'action': 'enable', 'object': ['air conditioner'], 'params': ['on'], 'any': '', 'position': [], 'pos_object': '', 'number': ''}
+66.249.83.51 - - [14/Aug/2020 15:43:17] "[37mPOST / HTTP/1.1[0m" 200 -
+[INFO] New mashup session initiated at 1597387428 - None
+66.249.83.51 - - [14/Aug/2020 15:43:48] "[37mPOST / HTTP/1.1[0m" 200 -
+{'time': '', 'pos_action': '', 'action': 'set', 'object': ['thermostat'], 'params': ['to 26 degrees'], 'any': '', 'position': [], 'pos_object': '', 'number': ''}
+66.249.83.51 - - [14/Aug/2020 15:43:59] "[37mPOST / HTTP/1.1[0m" 200 -
+[INFO] New mashup created at 1597387449 - [{'pos_action': '', 'pos_object': '', 'action': 'set', 'object': ['thermostat'], 'position': [], 'any': '', 'params': ['to 26 degrees'], 'time': '', 'number': ''}]
+{'time': '', 'pos_action': '', 'action': 'set', 'object': ['thermostat'], 'params': ['to 26 degrees'], 'any': '', 'position': [], 'pos_object': '', 'number': ''}
+66.249.83.55 - - [14/Aug/2020 15:44:09] "[37mPOST / HTTP/1.1[0m" 200 -
+[INFO] New mashup session initiated at 1597388741 - None
+66.249.83.55 - - [14/Aug/2020 16:05:41] "[37mPOST / HTTP/1.1[0m" 200 -
+{'time': '2020-08-14T20:00:00+09:00', 'pos_action': '', 'action': 'turn', 'object': ['computer'], 'any': '', 'position': ['at'], 'pos_object': '', 'params': ['on'], 'number': ''}
+66.249.83.51 - - [14/Aug/2020 16:05:51] "[37mPOST / HTTP/1.1[0m" 200 -
+{'time': '2020-08-14T20:00:00+09:00', 'pos_action': '', 'action': 'turn', 'object': ['computer'], 'any': '', 'position': ['at'], 'pos_object': '', 'params': ['on'], 'number': ''}
+{'time': '2020-08-14T20:00:00+09:00', 'pos_action': '', 'action': 'turn', 'object': ['TV'], 'any': '', 'position': ['at'], 'pos_object': '', 'params': ['off'], 'number': ''}
+[Error] Failed to instantiate the mashup - list index out of range
+66.249.83.55 - - [14/Aug/2020 16:06:11] "[37mPOST / HTTP/1.1[0m" 200 -
+{'time': '2020-08-14T20:00:00+09:00', 'pos_action': '', 'action': 'turn', 'object': ['computer'], 'any': '', 'position': ['at'], 'pos_object': '', 'params': ['on'], 'number': ''}
+{'time': '2020-08-14T20:00:00+09:00', 'pos_action': '', 'action': 'turn', 'object': ['TV'], 'any': '', 'position': ['at'], 'pos_object': '', 'params': ['off'], 'number': ''}
+[Error] Failed to instantiate the mashup - list index out of range
+66.249.83.55 - - [14/Aug/2020 16:06:25] "[37mPOST / HTTP/1.1[0m" 200 -
+{'time': '2020-08-14T20:00:00+09:00', 'pos_action': '', 'action': 'turn', 'object': ['computer'], 'any': '', 'position': ['at'], 'pos_object': '', 'params': ['on'], 'number': ''}
+{'time': '2020-08-14T20:00:00+09:00', 'pos_action': '', 'action': 'turn', 'object': ['TV'], 'any': '', 'position': ['at'], 'pos_object': '', 'params': ['off'], 'number': ''}
+[Error] Failed to instantiate the mashup - list index out of range
+66.249.83.53 - - [14/Aug/2020 16:06:35] "[37mPOST / HTTP/1.1[0m" 200 -
+{'time': '2020-08-14T20:00:00+09:00', 'pos_action': '', 'action': 'turn', 'object': ['computer'], 'any': '', 'position': ['at'], 'pos_object': '', 'params': ['on'], 'number': ''}
+{'time': '2020-08-14T20:00:00+09:00', 'pos_action': '', 'action': 'turn', 'object': ['TV'], 'any': '', 'position': ['at'], 'pos_object': '', 'params': ['off'], 'number': ''}
+[Error] Failed to instantiate the mashup - list index out of range
+66.249.83.51 - - [14/Aug/2020 16:06:49] "[37mPOST / HTTP/1.1[0m" 200 -
+{'time': '2020-08-14T20:00:00+09:00', 'pos_action': '', 'action': 'turn', 'object': ['computer'], 'any': '', 'position': ['at'], 'pos_object': '', 'params': ['on'], 'number': ''}
+{'time': '2020-08-14T20:00:00+09:00', 'pos_action': '', 'action': 'turn', 'object': ['TV'], 'any': '', 'position': ['at'], 'pos_object': '', 'params': ['off'], 'number': ''}
+[Error] Failed to instantiate the mashup - list index out of range
+66.249.83.51 - - [14/Aug/2020 16:07:02] "[37mPOST / HTTP/1.1[0m" 200 -
+[INFO] New mashup session initiated at 1597388890 - [{'pos_object': '', 'action': 'turn', 'object': ['computer'], 'params': ['on'], 'pos_action': '', 'any': '', 'position': ['at'], 'time': '2020-08-14T20:00:00+09:00', 'number': ''}]
+66.249.83.53 - - [14/Aug/2020 16:08:10] "[37mPOST / HTTP/1.1[0m" 200 -
+{'time': '2020-08-14T20:00:00+09:00', 'pos_action': '', 'action': 'turn', 'object': ['computer'], 'any': '', 'position': ['at'], 'pos_object': '', 'params': ['on'], 'number': ''}
+66.249.83.53 - - [14/Aug/2020 16:08:19] "[37mPOST / HTTP/1.1[0m" 200 -
+[INFO] New mashup created at 1597388914 - [{'pos_object': '', 'action': 'turn', 'object': ['computer'], 'params': ['on'], 'pos_action': '', 'any': '', 'position': ['at'], 'time': '2020-08-14T20:00:00+09:00', 'number': ''}]
+{'time': '2020-08-14T20:00:00+09:00', 'pos_action': '', 'action': 'turn', 'object': ['computer'], 'any': '', 'position': ['at'], 'pos_object': '', 'params': ['on'], 'number': ''}
+66.249.83.55 - - [14/Aug/2020 16:08:34] "[37mPOST / HTTP/1.1[0m" 200 -
+[INFO] New mashup session initiated at 1597388935 - None
+66.249.83.53 - - [14/Aug/2020 16:08:55] "[37mPOST / HTTP/1.1[0m" 200 -
+{'time': '2020-08-14T20:00:00+09:00', 'pos_action': '', 'action': 'turn', 'object': ['TV'], 'any': '', 'position': ['at'], 'pos_object': '', 'params': ['off'], 'number': ''}
+66.249.83.53 - - [14/Aug/2020 16:09:04] "[37mPOST / HTTP/1.1[0m" 200 -
+[INFO] New mashup created at 1597388956 - [{'pos_object': '', 'action': 'turn', 'object': ['TV'], 'params': ['off'], 'pos_action': '', 'any': '', 'position': ['at'], 'time': '2020-08-14T20:00:00+09:00', 'number': ''}]
+{'time': '2020-08-14T20:00:00+09:00', 'pos_action': '', 'action': 'turn', 'object': ['TV'], 'any': '', 'position': ['at'], 'pos_object': '', 'params': ['off'], 'number': ''}
+66.249.83.55 - - [14/Aug/2020 16:09:16] "[37mPOST / HTTP/1.1[0m" 200 -
+[INFO] New mashup session initiated at 1597389059 - None
+66.249.83.55 - - [14/Aug/2020 16:10:59] "[37mPOST / HTTP/1.1[0m" 200 -
+{'time': '2020-08-14T20:00:00+09:00', 'pos_action': '', 'action': 'turn', 'object': ['audio'], 'any': '', 'position': ['at'], 'pos_object': '', 'params': ['off'], 'number': ''}
+66.249.83.51 - - [14/Aug/2020 16:11:12] "[37mPOST / HTTP/1.1[0m" 200 -
+[INFO] New mashup created at 1597389084 - [{'pos_object': '', 'action': 'turn', 'object': ['audio'], 'params': ['off'], 'pos_action': '', 'any': '', 'position': ['at'], 'time': '2020-08-14T20:00:00+09:00', 'number': ''}]
+{'time': '2020-08-14T20:00:00+09:00', 'pos_action': '', 'action': 'turn', 'object': ['audio'], 'any': '', 'position': ['at'], 'pos_object': '', 'params': ['off'], 'number': ''}
+66.249.83.53 - - [14/Aug/2020 16:11:24] "[37mPOST / HTTP/1.1[0m" 200 -
+[INFO] New mashup session initiated at 1597389118 - None
+66.249.83.53 - - [14/Aug/2020 16:11:58] "[37mPOST / HTTP/1.1[0m" 200 -
+{'pos_action': '', 'time': '2020-08-14T20:00:00+09:00', 'number': '', 'object': ['security'], 'params': [], 'any': '', 'position': ['at'], 'pos_object': '', 'action': ''}
+[Error] Failed to instantiate the mashup - ''
+66.249.83.55 - - [14/Aug/2020 16:12:21] "[37mPOST / HTTP/1.1[0m" 200 -
+{'time': '2020-08-14T20:00:00+09:00', 'pos_action': '', 'action': 'turn', 'object': ['security'], 'any': '', 'position': ['at'], 'pos_object': '', 'params': ['on'], 'number': ''}
+66.249.83.53 - - [14/Aug/2020 16:12:34] "[37mPOST / HTTP/1.1[0m" 200 -
+[INFO] New mashup created at 1597389167 - [{'pos_object': '', 'action': 'turn', 'object': ['security'], 'params': ['on'], 'pos_action': '', 'any': '', 'position': ['at'], 'time': '2020-08-14T20:00:00+09:00', 'number': ''}]
+{'time': '2020-08-14T20:00:00+09:00', 'pos_action': '', 'action': 'turn', 'object': ['security'], 'any': '', 'position': ['at'], 'pos_object': '', 'params': ['on'], 'number': ''}
+66.249.83.55 - - [14/Aug/2020 16:12:47] "[37mPOST / HTTP/1.1[0m" 200 -
+[INFO] New mashup session initiated at 1597396142 - None
+66.249.83.53 - - [14/Aug/2020 18:09:02] "[37mPOST / HTTP/1.1[0m" 200 -
+{'time': '', 'pos_action': 'live', 'action': 'disable', 'object': ['light'], 'any': '', 'position': ['if'], 'pos_object': 'self', 'params': ['live home'], 'number': ''}
+[Error] Failed to instantiate the mashup - None
+66.249.83.53 - - [14/Aug/2020 18:09:23] "[37mPOST / HTTP/1.1[0m" 200 -
+{'pos_action': '', 'time': '', 'number': '', 'object': [], 'params': [], 'any': '', 'position': ['if'], 'pos_object': 'that', 'action': 'come'}
+[Error] Failed to instantiate the mashup - list index out of range
+66.249.83.51 - - [14/Aug/2020 18:09:35] "[37mPOST / HTTP/1.1[0m" 200 -
+{'time': '', 'pos_action': 'alive', 'action': '', 'object': [], 'any': '', 'position': ['if'], 'pos_object': 'self', 'params': [], 'number': ''}
+[Error] Failed to instantiate the mashup - list index out of range
+66.249.83.51 - - [14/Aug/2020 18:09:47] "[37mPOST / HTTP/1.1[0m" 200 -
+{'time': '', 'pos_action': '', 'action': 'light', 'object': ['light'], 'any': '', 'position': ['if', 'or', 'then'], 'pos_object': '', 'params': [], 'number': ''}
+[Error] Failed to instantiate the mashup - [Error] Could not infer the trigger.
+66.249.83.51 - - [14/Aug/2020 18:10:00] "[37mPOST / HTTP/1.1[0m" 200 -
+{'time': '', 'pos_action': 'align', 'action': 'tonic', 'object': ['light'], 'any': '', 'position': ['if', 'then'], 'pos_object': 'self', 'params': [], 'number': ''}
+[Error] Failed to instantiate the mashup - 'tonic'
+66.249.83.53 - - [14/Aug/2020 18:10:16] "[37mPOST / HTTP/1.1[0m" 200 -
+{'time': '', 'pos_action': 'leave', 'action': 'disable', 'object': ['light'], 'any': '', 'position': ['if'], 'pos_object': 'self', 'params': ['loom then'], 'number': ''}
+66.249.83.53 - - [14/Aug/2020 18:10:28] "[37mPOST / HTTP/1.1[0m" 200 -
+[INFO] New mashup created at 1597396242 - [{'time': '', 'pos_action': 'leave', 'action': 'disable', 'object': ['light'], 'params': ['loom then'], 'any': '', 'position': ['if'], 'pos_object': 'self', 'number': ''}]
+{'time': '', 'pos_action': 'leave', 'action': 'disable', 'object': ['light'], 'any': '', 'position': ['if'], 'pos_object': 'self', 'params': ['loom then'], 'number': ''}
+66.249.83.53 - - [14/Aug/2020 18:10:42] "[37mPOST / HTTP/1.1[0m" 200 -
+[INFO] New mashup session initiated at 1597396463 - None
+66.249.83.51 - - [14/Aug/2020 18:14:23] "[37mPOST / HTTP/1.1[0m" 200 -
+{'time': '', 'pos_action': 'leave', 'action': 'enable', 'object': ['security'], 'any': '', 'position': ['if'], 'pos_object': 'self', 'params': ['home then', 'devices'], 'number': ''}
+66.249.83.53 - - [14/Aug/2020 18:14:32] "[37mPOST / HTTP/1.1[0m" 200 -
+[INFO] New mashup created at 1597396484 - [{'time': '', 'pos_action': 'leave', 'action': 'enable', 'object': ['security'], 'params': ['home then', 'devices'], 'any': '', 'position': ['if'], 'pos_object': 'self', 'number': ''}]
+{'time': '', 'pos_action': 'leave', 'action': 'enable', 'object': ['security'], 'any': '', 'position': ['if'], 'pos_object': 'self', 'params': ['home then', 'devices'], 'number': ''}
+66.249.83.55 - - [14/Aug/2020 18:14:44] "[37mPOST / HTTP/1.1[0m" 200 -
+[INFO] New mashup session initiated at 1597397075 - None
+66.249.83.51 - - [14/Aug/2020 18:24:35] "[37mPOST / HTTP/1.1[0m" 200 -
+{'pos_action': '', 'time': '', 'number': '', 'object': ['window'], 'params': [], 'any': '', 'position': ['if'], 'pos_object': 'laning', 'action': 'close'}
+[Error] Failed to instantiate the mashup - Not supported object - laning
+66.249.83.51 - - [14/Aug/2020 18:24:42] "[37mPOST / HTTP/1.1[0m" 200 -
+{'time': '', 'pos_action': 'enable', 'action': '', 'object': [], 'any': '', 'position': ['if'], 'pos_object': 'a plane', 'params': [], 'number': ''}
+[Error] Failed to instantiate the mashup - Not supported object - a plane
+66.249.83.51 - - [14/Aug/2020 18:24:55] "[37mPOST / HTTP/1.1[0m" 200 -
+{'pos_action': '', 'time': '', 'number': '', 'object': ['window'], 'params': [], 'any': '', 'position': ['it', 'Stars'], 'pos_object': 'weather', 'action': "'"}
+[Error] Failed to instantiate the mashup - "'"
+66.249.83.53 - - [14/Aug/2020 18:25:06] "[37mPOST / HTTP/1.1[0m" 200 -
+[INFO] New mashup session initiated at 1597397116 - []
+66.249.83.55 - - [14/Aug/2020 18:25:16] "[37mPOST / HTTP/1.1[0m" 200 -
+{'pos_action': '', 'time': '', 'number': '', 'object': ['window'], 'params': [], 'any': '', 'position': ['if'], 'pos_object': 'laning', 'action': 'close'}
+[Error] Failed to instantiate the mashup - Not supported object - laning
+66.249.83.51 - - [14/Aug/2020 18:25:26] "[37mPOST / HTTP/1.1[0m" 200 -
+[INFO] New mashup session initiated at 1597397146 - []
+66.249.83.51 - - [14/Aug/2020 18:25:46] "[37mPOST / HTTP/1.1[0m" 200 -
+{'time': '', 'pos_action': '', 'action': 'enable', 'object': ['weather'], 'any': '', 'position': ['if'], 'pos_object': '', 'params': ['close to Windows'], 'number': ''}
+[Error] Failed to instantiate the mashup - [Error] Could not infer the trigger.
+66.249.83.55 - - [14/Aug/2020 18:26:01] "[37mPOST / HTTP/1.1[0m" 200 -
+{'time': '', 'pos_action': '', 'action': 'enable', 'object': ['weather'], 'any': '', 'position': ['if'], 'pos_object': '', 'params': ['close to Windows'], 'number': ''}
+[Error] Failed to instantiate the mashup - [Error] Could not infer the trigger.
+66.249.83.55 - - [14/Aug/2020 18:26:15] "[37mPOST / HTTP/1.1[0m" 200 -
+[INFO] New mashup session initiated at 1597397261 - []
+66.249.83.53 - - [14/Aug/2020 18:27:41] "[37mPOST / HTTP/1.1[0m" 200 -
+{'time': '', 'pos_action': 'enable', 'action': 'close', 'object': ['window'], 'any': '', 'position': ['if'], 'pos_object': 'weather', 'params': [], 'number': ''}
+66.249.83.53 - - [14/Aug/2020 18:27:51] "[37mPOST / HTTP/1.1[0m" 200 -
+[INFO] New mashup created at 1597397283 - [{'time': '', 'pos_action': 'enable', 'action': 'close', 'object': ['window'], 'params': [], 'any': '', 'position': ['if'], 'pos_object': 'weather', 'number': ''}]
+{'time': '', 'pos_action': 'enable', 'action': 'close', 'object': ['window'], 'any': '', 'position': ['if'], 'pos_object': 'weather', 'params': [], 'number': ''}
+66.249.83.55 - - [14/Aug/2020 18:28:03] "[37mPOST / HTTP/1.1[0m" 200 -
+[INFO] New mashup session initiated at 1597397303 - None
+66.249.83.51 - - [14/Aug/2020 18:28:23] "[37mPOST / HTTP/1.1[0m" 200 -
+{'time': '', 'pos_action': 'enable', 'action': 'close', 'object': ['shade'], 'any': '', 'position': ['if'], 'pos_object': 'weather', 'params': [], 'number': ''}
+66.249.83.51 - - [14/Aug/2020 18:28:32] "[37mPOST / HTTP/1.1[0m" 200 -
+[INFO] New mashup created at 1597397323 - [{'time': '', 'pos_action': 'enable', 'action': 'close', 'object': ['shade'], 'params': [], 'any': '', 'position': ['if'], 'pos_object': 'weather', 'number': ''}]
+{'time': '', 'pos_action': 'enable', 'action': 'close', 'object': ['shade'], 'any': '', 'position': ['if'], 'pos_object': 'weather', 'params': [], 'number': ''}
+66.249.83.51 - - [14/Aug/2020 18:28:43] "[37mPOST / HTTP/1.1[0m" 200 -
+[INFO] New mashup session initiated at 1597397343 - None
+66.249.83.53 - - [14/Aug/2020 18:29:03] "[37mPOST / HTTP/1.1[0m" 200 -
+{'time': '', 'pos_action': 'enable', 'action': 'turn', 'object': ['air conditioner'], 'any': '', 'position': ['if'], 'pos_object': 'laning', 'params': ['on'], 'number': ''}
+[Error] Failed to instantiate the mashup - Not supported object - laning
+66.249.83.53 - - [14/Aug/2020 18:29:14] "[37mPOST / HTTP/1.1[0m" 200 -
+{'time': '', 'pos_action': 'enable', 'action': 'turn', 'object': ['air conditioner'], 'any': '', 'position': ['if'], 'pos_object': 'laning', 'params': ['on'], 'number': ''}
+[Error] Failed to instantiate the mashup - Not supported object - laning
+66.249.83.51 - - [14/Aug/2020 18:29:27] "[37mPOST / HTTP/1.1[0m" 200 -
+[INFO] New mashup session initiated at 1597397378 - []
+66.249.83.53 - - [14/Aug/2020 18:29:38] "[37mPOST / HTTP/1.1[0m" 200 -
+{'time': '', 'pos_action': 'enable', 'action': 'turn', 'object': ['air conditioner'], 'any': '', 'position': ['if'], 'pos_object': 'laning', 'params': ['on'], 'number': ''}
+[Error] Failed to instantiate the mashup - Not supported object - laning
+66.249.83.53 - - [14/Aug/2020 18:29:48] "[37mPOST / HTTP/1.1[0m" 200 -
+{'pos_action': 'laning', 'action': 'enable', 'any': '', 'params': [], 'object': ['thermostat'], 'position': [], 'pos_object': '', 'time': '', 'number': 26.0}
+66.249.83.53 - - [14/Aug/2020 18:30:06] "[37mPOST / HTTP/1.1[0m" 200 -
+[INFO] New mashup created at 1597397424 - [{'time': '', 'pos_action': 'laning', 'action': 'enable', 'object': ['thermostat'], 'any': '', 'position': [], 'pos_object': '', 'params': [], 'number': 26.0}]
+{'pos_action': 'laning', 'action': 'enable', 'any': '', 'params': [], 'object': ['thermostat'], 'position': [], 'pos_object': '', 'time': '', 'number': 26.0}
+66.249.83.51 - - [14/Aug/2020 18:30:24] "[37mPOST / HTTP/1.1[0m" 200 -
+[INFO] New mashup session initiated at 1597397442 - None
+66.249.83.53 - - [14/Aug/2020 18:30:42] "[37mPOST / HTTP/1.1[0m" 200 -
+{'time': '', 'pos_action': 'enable', 'action': 'turn', 'object': ['air conditioner'], 'any': '', 'position': ['if'], 'pos_object': 'laning', 'params': ['on'], 'number': ''}
+[Error] Failed to instantiate the mashup - Not supported object - laning
+66.249.83.53 - - [14/Aug/2020 18:30:53] "[37mPOST / HTTP/1.1[0m" 200 -
+{'time': '', 'pos_action': '', 'action': 'turn', 'object': ['air conditioner'], 'any': '', 'position': ['repeat'], 'pos_object': 'weather', 'params': ['on'], 'number': ''}
+66.249.83.53 - - [14/Aug/2020 18:31:09] "[37mPOST / HTTP/1.1[0m" 200 -
+[INFO] New mashup created at 1597397480 - [{'time': '', 'pos_action': '', 'action': 'turn', 'object': ['air conditioner'], 'params': ['on'], 'any': '', 'position': ['repeat'], 'pos_object': 'weather', 'number': ''}]
+{'time': '', 'pos_action': '', 'action': 'turn', 'object': ['air conditioner'], 'any': '', 'position': ['repeat'], 'pos_object': 'weather', 'params': ['on'], 'number': ''}
+66.249.83.51 - - [14/Aug/2020 18:31:20] "[37mPOST / HTTP/1.1[0m" 200 -
+[INFO] New mashup session initiated at 1597398029 - None
+66.249.83.53 - - [14/Aug/2020 18:40:29] "[37mPOST / HTTP/1.1[0m" 200 -
+{'pos_action': '', 'time': '2020-08-14T20:00:00+09:00', 'number': '', 'object': ['computer'], 'params': [], 'any': '', 'position': ['at'], 'pos_object': '', 'action': 'enable'}
+66.249.83.55 - - [14/Aug/2020 18:40:37] "[37mPOST / HTTP/1.1[0m" 200 -
+[INFO] New mashup created at 1597398049 - [{'time': '2020-08-14T20:00:00+09:00', 'pos_object': '', 'action': 'enable', 'object': ['computer'], 'pos_action': '', 'any': '', 'position': ['at'], 'params': [], 'number': ''}]
+{'pos_action': '', 'time': '2020-08-14T20:00:00+09:00', 'number': '', 'object': ['computer'], 'params': [], 'any': '', 'position': ['at'], 'pos_object': '', 'action': 'enable'}
+66.249.83.55 - - [14/Aug/2020 18:40:49] "[37mPOST / HTTP/1.1[0m" 200 -
+[INFO] New mashup session initiated at 1597398066 - None
+66.249.83.51 - - [14/Aug/2020 18:41:06] "[37mPOST / HTTP/1.1[0m" 200 -
+{'time': '2020-08-14T20:00:00+09:00', 'pos_action': 'turn', 'pos_object': 'TV', 'object': [], 'action': '', 'any': '', 'position': ['at'], 'params': ['off'], 'number': ''}
+[Error] Failed to instantiate the mashup - list index out of range
+66.249.83.53 - - [14/Aug/2020 18:41:14] "[37mPOST / HTTP/1.1[0m" 200 -
+{'pos_action': '', 'time': '2020-08-14T20:00:00+09:00', 'number': '', 'object': ['TV'], 'params': [], 'any': '', 'position': ['at'], 'pos_object': '', 'action': 'disable'}
+66.249.83.55 - - [14/Aug/2020 18:41:26] "[37mPOST / HTTP/1.1[0m" 200 -
+[INFO] New mashup created at 1597398098 - [{'time': '2020-08-14T20:00:00+09:00', 'pos_object': '', 'action': 'disable', 'object': ['TV'], 'pos_action': '', 'any': '', 'position': ['at'], 'params': [], 'number': ''}]
+{'pos_action': '', 'time': '2020-08-14T20:00:00+09:00', 'number': '', 'object': ['TV'], 'params': [], 'any': '', 'position': ['at'], 'pos_object': '', 'action': 'disable'}
+66.249.83.53 - - [14/Aug/2020 18:41:38] "[37mPOST / HTTP/1.1[0m" 200 -
+[INFO] New mashup session initiated at 1597398117 - None
+66.249.83.51 - - [14/Aug/2020 18:41:57] "[37mPOST / HTTP/1.1[0m" 200 -
+{'time': '', 'pos_action': '', 'action': 'close', 'object': ['shade'], 'params': ['at the ATM'], 'any': '', 'position': [], 'pos_object': '', 'number': ''}
+66.249.83.55 - - [14/Aug/2020 18:42:06] "[37mPOST / HTTP/1.1[0m" 200 -
+[INFO] New mashup created at 1597398135 - [{'pos_action': '', 'pos_object': '', 'action': 'close', 'object': ['shade'], 'position': [], 'any': '', 'params': ['at the ATM'], 'time': '', 'number': ''}]
+{'time': '', 'pos_action': '', 'action': 'close', 'object': ['shade'], 'params': ['at the ATM'], 'any': '', 'position': [], 'pos_object': '', 'number': ''}
+66.249.83.53 - - [14/Aug/2020 18:42:15] "[37mPOST / HTTP/1.1[0m" 200 -
+[INFO] New mashup session initiated at 1597398152 - None
+66.249.83.51 - - [14/Aug/2020 18:42:32] "[37mPOST / HTTP/1.1[0m" 200 -
+{'time': '2020-08-14T20:00:00+09:00', 'pos_action': '', 'action': 'turn', 'object': ['light'], 'any': '', 'position': ['at'], 'pos_object': '', 'params': ['off'], 'number': ''}
+66.249.83.51 - - [14/Aug/2020 18:42:38] "[37mPOST / HTTP/1.1[0m" 200 -
+[INFO] New mashup created at 1597398170 - [{'pos_object': '', 'action': 'turn', 'object': ['light'], 'params': ['off'], 'pos_action': '', 'any': '', 'position': ['at'], 'time': '2020-08-14T20:00:00+09:00', 'number': ''}]
+{'time': '2020-08-14T20:00:00+09:00', 'pos_action': '', 'action': 'turn', 'object': ['light'], 'any': '', 'position': ['at'], 'pos_object': '', 'params': ['off'], 'number': ''}
+66.249.83.55 - - [14/Aug/2020 18:42:50] "[37mPOST / HTTP/1.1[0m" 200 -
+[INFO] New mashup session initiated at 1597398189 - None
+66.249.83.53 - - [14/Aug/2020 18:43:09] "[37mPOST / HTTP/1.1[0m" 200 -
+{'pos_action': 'enable', 'time': '2020-08-14T20:00:00+09:00', 'object': ['security'], 'action': '', 'any': '', 'position': ['at'], 'pos_object': 'is', 'params': [], 'number': ''}
+[Error] Failed to instantiate the mashup - Not supported object - is
+66.249.83.51 - - [14/Aug/2020 18:43:19] "[37mPOST / HTTP/1.1[0m" 200 -
+{'time': '2020-08-14T20:00:00+09:00', 'pos_action': 'enable', 'action': '', 'any': '', 'object': ['secret'], 'position': ['at'], 'pos_object': '', 'params': [], 'number': ''}
+[Error] Failed to instantiate the mashup - Not supported object - secret
+66.249.83.55 - - [14/Aug/2020 18:43:32] "[37mPOST / HTTP/1.1[0m" 200 -
+{'time': '2020-08-14T21:00:00+09:00', 'pos_action': '', 'action': 'enable', 'object': ['security'], 'any': '', 'position': ['at'], 'pos_object': '', 'params': ['system'], 'number': ''}
+66.249.83.55 - - [14/Aug/2020 18:43:43] "[37mPOST / HTTP/1.1[0m" 200 -
+[INFO] Mashup creation aborted at 1597398236 - [{'pos_object': '', 'action': 'enable', 'object': ['security'], 'params': ['system'], 'pos_action': '', 'any': '', 'position': ['at'], 'time': '2020-08-14T21:00:00+09:00', 'number': ''}]
+66.249.83.51 - - [14/Aug/2020 18:43:56] "[37mPOST / HTTP/1.1[0m" 200 -
+[INFO] New mashup session initiated at 1597398253 - None
+66.249.83.53 - - [14/Aug/2020 18:44:13] "[37mPOST / HTTP/1.1[0m" 200 -
+{'time': '2020-08-14T20:00:00+09:00', 'pos_action': '', 'action': 'enable', 'object': ['security'], 'any': '', 'position': ['at'], 'pos_object': '', 'params': ['system'], 'number': ''}
+66.249.83.53 - - [14/Aug/2020 18:44:24] "[37mPOST / HTTP/1.1[0m" 200 -
+[INFO] New mashup created at 1597398277 - [{'pos_object': '', 'action': 'enable', 'object': ['security'], 'params': ['system'], 'pos_action': '', 'any': '', 'position': ['at'], 'time': '2020-08-14T20:00:00+09:00', 'number': ''}]
+{'time': '2020-08-14T20:00:00+09:00', 'pos_action': '', 'action': 'enable', 'object': ['security'], 'any': '', 'position': ['at'], 'pos_object': '', 'params': ['system'], 'number': ''}
+66.249.83.51 - - [14/Aug/2020 18:44:37] "[37mPOST / HTTP/1.1[0m" 200 -
+[INFO] New mashup session initiated at 1597398295 - None
+66.249.83.55 - - [14/Aug/2020 18:44:55] "[37mPOST / HTTP/1.1[0m" 200 -
+{'pos_action': '', 'time': '2020-08-14T20:00:00+09:00', 'number': '', 'object': ['self'], 'params': [], 'any': '', 'position': ['at'], 'pos_object': '', 'action': 'remind'}
+66.249.83.51 - - [14/Aug/2020 18:45:03] "[37mPOST / HTTP/1.1[0m" 200 -
+[INFO] New mashup created at 1597398315 - [{'time': '2020-08-14T20:00:00+09:00', 'pos_object': '', 'action': 'remind', 'object': ['self'], 'pos_action': '', 'any': '', 'position': ['at'], 'params': [], 'number': ''}]
+{'pos_action': '', 'time': '2020-08-14T20:00:00+09:00', 'number': '', 'object': ['self'], 'params': [], 'any': '', 'position': ['at'], 'pos_object': '', 'action': 'remind'}
+66.249.83.51 - - [14/Aug/2020 18:45:15] "[37mPOST / HTTP/1.1[0m" 200 -
+[INFO] New mashup session initiated at 1597646207 - None
+66.249.83.55 - - [17/Aug/2020 15:36:47] "[37mPOST / HTTP/1.1[0m" 200 -
+{'time': '', 'pos_action': 'come', 'action': 'turn', 'object': ['light'], 'any': '', 'position': ['if'], 'pos_object': 'self', 'params': ['room', 'on'], 'number': ''}
+66.249.83.55 - - [17/Aug/2020 15:36:57] "[37mPOST / HTTP/1.1[0m" 200 -
+[INFO] New mashup created at 1597646228 - [{'time': '', 'pos_action': 'come', 'action': 'turn', 'object': ['light'], 'params': ['room', 'on'], 'any': '', 'position': ['if'], 'pos_object': 'self', 'number': ''}]
+{'time': '', 'pos_action': 'come', 'action': 'turn', 'object': ['light'], 'any': '', 'position': ['if'], 'pos_object': 'self', 'params': ['room', 'on'], 'number': ''}
+66.249.83.51 - - [17/Aug/2020 15:37:08] "[37mPOST / HTTP/1.1[0m" 200 -
+[INFO] New mashup session initiated at 1597646242 - None
+66.249.83.55 - - [17/Aug/2020 15:37:22] "[37mPOST / HTTP/1.1[0m" 200 -
+{'time': '', 'pos_action': 'leave', 'action': 'turn', 'object': ['light'], 'any': '', 'position': ['if'], 'pos_object': 'self', 'params': ['room then', 'off'], 'number': ''}
+66.249.83.51 - - [17/Aug/2020 15:37:33] "[37mPOST / HTTP/1.1[0m" 200 -
+[INFO] Mashup creation aborted at 1597646264 - [{'time': '', 'pos_action': 'leave', 'action': 'turn', 'object': ['light'], 'params': ['room then', 'off'], 'any': '', 'position': ['if'], 'pos_object': 'self', 'number': ''}]
+66.249.83.51 - - [17/Aug/2020 15:37:44] "[37mPOST / HTTP/1.1[0m" 200 -

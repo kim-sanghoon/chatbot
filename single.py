@@ -57,14 +57,14 @@ def main():
                 ],
             }
 
-            fulfillmentText = 'Okay, your mashup is ' + speak_mashup(m) + 'Do you want to generate your mashup?'
+            fulfillmentText = 'Okay, your mashup is ' + speak_mashup(m) + 'Do you want to deploy your mashup?'
             ret['fulfillmentText'] = fulfillmentText
 
         except Exception as e:
             print('[Error] Failed to instantiate the mashup - ' + str(e))
             cursor.pop()
             ret = {
-                "fulfillmentText": "Oops, your input is not yet supported by the agent. Could you try with other commands?",
+                "fulfillmentText": "Oops, your input is not supported by the agent. Could you rephrase it?",
             }
 
             return jsonify(ret)
@@ -95,7 +95,9 @@ def main():
             print('[Error] Failed to instantiate the mashup - ' + str(e))
             ret = {
                 "fulfillmentText": "Sorry, something strange has occurred while processing your input.",
-                "expectUserResponse": False
+                "payload": {
+                    'google': {'expectUserResponse': False}
+                }
             }
 
             return jsonify(ret)
