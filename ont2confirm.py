@@ -163,19 +163,19 @@ def speak_add_command(m, resp=True):
     if firstAppend:
         firstAppend = False
         
-        ret += " Got it, tell me if you have more commands to add, or just say I'm done."
+        ret += "<break time='700ms'/> Got it, tell me if you have more commands to add, or just say I'm done."
     else:
         responses = [
-            "Okay, anything else to add?",
-            "Consider it done, anything else?",
-            "Added to the mashup, anything else?",
-            "Sure, is there anything else?",
+            "<break time='700ms'/> Okay, anything else to add?",
+            "<break tiem='700ms'/> Great, anything else?",
+            "<break time='700ms'/> Got it, anything else?",
+            "<break time='700ms'/> Sure, is there anything else?",
         ]
 
         if resp:
             ret += random.choice(responses)
 
-    return ret
+    return '<speak>' + ret + '</speak>'
 
 def confirm_init():
     global initialTriggerMet

@@ -96,7 +96,7 @@ def main():
             print('[Error] Failed to instantiate the mashup - ' + str(e))
             cursor.pop()
             ret = {
-                "fulfillmentText": "Oops, your input is not supported by the agent. Could you rephrase it?",
+                "fulfillmentText": "Oops, I failed to process your input. Could you rephrase it?",
             }
 
             return jsonify(ret)
