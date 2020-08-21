@@ -50,6 +50,28 @@ def main():
             m = Mashup()
             m.init_list(copy.deepcopy(cursor))
 
+            # If trigger is not recognized, refuse deploying the mashup
+            if 'Trigger' not in m.first.category:
+                now = int(datetime.now().timestamp())
+                print('[Error] Missing trigger in - ' + str(now))
+                cursor.pop()
+                ret = {
+                    "fulfillmentText": "Sorry, I couldn't hear the trigger. Could you say that again?"
+                }
+
+                return jsonify(ret)
+
+            # If action is not recognized, refuse deploying the mashup
+            if 'Action' not in m.last.category:
+                now = int(datetime.now().timestamp())
+                print('[Error] Missing action in - ' + str(now))
+                cursor.pop()
+                ret = {
+                    "fulfillmentText": "Sorry, I couldn't hear the action. Could you say that again?"
+                }
+
+                return jsonify(ret)
+
             ret = {
                 "outputContexts": [
                     {"name": "{}/contexts/add_command-followup".format(data['session']),
@@ -64,7 +86,7 @@ def main():
             print('[Error] Failed to instantiate the mashup - ' + str(e))
             cursor.pop()
             ret = {
-                "fulfillmentText": "Oops, your input is not supported by the agent. Could you rephrase it?",
+                "fulfillmentText": "Oops, I failed to process your input. Could you rephrase it?",
             }
 
             return jsonify(ret)

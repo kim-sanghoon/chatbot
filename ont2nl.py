@@ -113,10 +113,11 @@ def speak_mashup(m):
                 ret += str(minute) + " "
             ret += "PM. " if pm else "AM. "
 
+        ret += '<break time="700ms">'
         nextNode = list(g.neighbors(node))
         if len(nextNode) > 0:
             node = nextNode[0]
         else:
             break
     
-    return ret
+    return '<speak>' + ret + '</speak>'
