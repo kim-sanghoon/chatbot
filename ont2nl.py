@@ -50,14 +50,14 @@ nlDict = {
     'GPSEnterAreaTrigger': 'you enter the area. ',
     'GPSExitAreaTrigger': 'you leave the area. ',
     'EveryTimeTrigger': 'the time is ',
-    'WeatherConditionsTrigger': 'the weather condition is met. ',
+    'WeatherConditionsTrigger': 'the weather condition is raining. ',
     'ComputerTurnedOnTrigger': 'the computer is turned on. ',
     'ComputerTurnedOffTrigger': 'the computer is turned off. ',
     'VoiceCommandTrigger': 'the voice command is activated. ',
     # Actions list
     'EnableCoolingSystemAction': 'the air conditioner will be turned on. ',
     'DisableCoolingSystemAction': 'the air conditioner will be turned off. ',
-    'SetTemperatureAction': 'the temperature setting will be changed. ',
+    'SetTemperatureAction': 'the temperature setting will be changed to 26 degrees Celcius. ',
     'EnableAirPurifierSystemAction': 'the air purifier will be turned on. ',
     'DisableAirPurifierSystemAction': 'the air purifier will be turned off. ',
     'EnableHeatingSystemAction': 'the heater will be turned on. ',
@@ -120,4 +120,4 @@ def speak_mashup(m):
         else:
             break
     
-    return '<speak>' + ret + '</speak>'
+    return ret

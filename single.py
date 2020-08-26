@@ -79,7 +79,7 @@ def main():
                 ],
             }
 
-            fulfillmentText = 'Okay, your mashup is ' + speak_mashup(m) + 'Do you want to deploy your mashup?'
+            fulfillmentText = '<speak>Okay, your mashup is ' + speak_mashup(m) + 'Do you want to deploy your mashup?</speak>'
             ret['fulfillmentText'] = fulfillmentText
 
         except Exception as e:
