@@ -106,6 +106,7 @@ def main():
         print('[INFO] Command undone at ' + str(now))
 
         feedback_given += 1
+        last_length -= 1
 
         try:
             cursor.pop()
@@ -267,7 +268,7 @@ def main():
                 ],
             }
 
-            fulfillmentText = speak_mashup(m) + 'Do you want to deploy your mashup?'
+            fulfillmentText = speak_mashup(m) + 'Do you want to deploy your mashup?</speak>'
             ret['fulfillmentText'] = fulfillmentText
             feedback_given = 0 
         except:
@@ -295,7 +296,7 @@ def main():
             m = Mashup()
             m.init_list(copy.deepcopy(cursor))
 
-            fulfillmentText = speak_mashup(m) + " Tell me if you have more to add, or just say I'm done."
+            fulfillmentText = speak_mashup(m) + " Tell me if you have more to add, or just say I'm done.</speak>"
 
             ret['fulfillmentText'] = fulfillmentText
             feedback_given = 0
