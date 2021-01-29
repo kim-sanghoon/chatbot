@@ -6,6 +6,8 @@ from flask import request, jsonify
 from datetime import datetime
 import pickle, copy, random
 
+import argparse
+
 from mashup import *
 from ont2nl import *
 from ont2confirm import *
@@ -318,4 +320,13 @@ def main():
 
 
 if __name__ == "__main__":
-    app.run(host='0.0.0.0', port=443, ssl_context=('server.crt', 'server.key'))
+    parser = argparse.ArgumentParser(description='Chatbot server')
+    parser.add_argument('--protocol', default='https', help='protocol ("http" or "https")')
+    args = parser.parse_args()
+
+    if args.protocol == 'https':
+        app.run(host='0.0.0.0', port=443, ssl_context=('server.crt', 'server.key'))
+    elif args.protocol == 'http':
+        app.run(host='127.0.0.1', port=9000)
+    else:
+        raise RuntimeError("unexpected protocol {}".format(args.protocol))
