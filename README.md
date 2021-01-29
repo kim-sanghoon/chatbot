@@ -1,8 +1,20 @@
-# A Multi-Dialog Conversational Approach for Feature-Rich Services Mashup in IoT Environments
+# A Multi-Dialog Conversational Approach for Service Mashup in IoT Environments
+
+### Branches
+- `master` branch is the implementation of CoMMA and was used for the user study.
+- `single-utterance` branch is the baseline agent that was compared with CoMMA.
+- `video-figure` branch contains the realtime visualization tool (which is named `realtime-vis.ipynb`) and the dialogflow agent file.
+
+### Install
+
+```bash
+pip3 install -r requirements.txt
+```
 
 ### Testing Environment
 - Python 3.5 with Flask==1.1.2
-- Valid SSL certificate is required with filename of `server.crt` and `server.key`.
+<!-- - Valid SSL certificate is required with filename of `server.crt` and `server.key`. -->
+- Import the agent in your dialogflow console, and configure the webhook settings.
 - Simply `sudo ./app.py` from your local environment.
 
 ### Descriptions

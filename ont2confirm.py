@@ -12,38 +12,38 @@ import random
 
 confirmDict = {
     # Actions list
-    'EnableCoolingSystemAction': 'Turning the air conditioner on',
-    'DisableCoolingSystemAction': 'Turning the air conditioner off',
-    'SetTemperatureAction': 'Changing the temperature setting',
-    'EnableAirPurifierSystemAction': 'Turning the air purifier on',
-    'DisableAirPurifierSystemAction': 'Turning the air purifier off',
-    'EnableHeatingSystemAction': 'Turning the heater on',
-    'DisableHeatingSystemAction': 'Turning the heater off',
-    'StartWatchingTvAction': 'Turning the TV on',
-    'StopWatchingTvAction': 'Turning the TV off',
-    'EnableShadingSystemAction': 'Closing the shade',
-    'DisableShadingSystemAction': 'Opening the shade',
-    'SetShadingAction': 'Changing the shade position',
-    'EnableLightingSystemAction': 'Turning the lights on',
-    'DisableLightingSystemAction': 'Turning the lights off',
+    'EnableCoolingSystemAction': 'Turning on the air conditioner',
+    'DisableCoolingSystemAction': 'Turning off the air conditioner',
+    'SetTemperatureAction': 'Setting the temperature to 26 degrees Celcius',
+    'EnableAirPurifierSystemAction': 'Turning on the air purifier',
+    'DisableAirPurifierSystemAction': 'Turning off the air purifier',
+    'EnableHeatingSystemAction': 'Turning on the heater',
+    'DisableHeatingSystemAction': 'Turning off the heater',
+    'StartWatchingTvAction': 'Turning on the TV',
+    'StopWatchingTvAction': 'Turning off the TV',
+    'EnableShadingSystemAction': 'Closing the curtain',
+    'DisableShadingSystemAction': 'Opening the curtain',
+    'SetShadingAction': 'Changing the curtain position',
+    'EnableLightingSystemAction': 'Turning on the lights',
+    'DisableLightingSystemAction': 'Turning off the lights',
     'SetLightingAction': 'Changing the light setting',
-    'EnableHumidifierSystemAction': 'Turning the humidifier on',
-    'DisableHumidifierSystemAction': 'Turning the humidifier off',
+    'EnableHumidifierSystemAction': 'Turning on the humidifier',
+    'DisableHumidifierSystemAction': 'Turning off the humidifier',
     'SetHumidityAction': 'Changing the humidifier setting',
     'OpenWindowFrameAction': 'Opening the windows',
     'CloseWindowFrameAction': 'Closing the windows',
-    'EnableSecuritySystemAction': 'Activating the security system',
-    'DisableSecuritySystemAction': 'Deactivating the security system',
-    'AddAlarmAction': 'Adding an alarm',
-    'TurnAlarmOffAction': 'Turning the alarm off',
+    'EnableSecuritySystemAction': 'Enabling the security system',
+    'DisableSecuritySystemAction': 'Diabling the security system',
+    'AddAlarmAction': 'Adding a notification',
+    'TurnAlarmOffAction': 'Turning off the notification',
     'StartListeningMusicAction': 'Start playing the audio',
     'StopListeningMusicAction': 'Stop playing the audio',
     'IncreaseVolumeAction': 'Increasing the volume',
     'DecreaseVolumeAction': 'Decreasing the volume',
-    'TurnEntireDeviceOnAction': 'Turning entire devices on in this area',
-    'TurnEntireDeviceOffAction': 'Turning entire devices off in this area',
-    'TurnComputerOnAction': 'Turning the computer on',
-    'TurnComputerOffAction': 'Turning the computer off',
+    'TurnEntireDeviceOnAction': 'Turning on the entire devices in this area',
+    'TurnEntireDeviceOffAction': 'Turning off the entire devices in this area',
+    'TurnComputerOnAction': 'Turning on the computer',
+    'TurnComputerOffAction': 'Turning off the computer',
 
     # Triggers list
     'CoolingSystemEnabledTrigger': 'the air conditioner is turned on. ',
@@ -59,9 +59,9 @@ confirmDict = {
     'HeatingSystemDisabledTrigger': 'the heater is turned off. ',
     'StartedWatchingTvTrigger': 'the TV is turned on. ',
     'StoppedWatchingTvTrigger': 'the TV is turned off. ',
-    'ShadingSystemEnabledTrigger': 'the shade is closed. ',
-    'ShadingSystemDisabledTrigger': 'the shade is opened. ',
-    'ShadeSetToTrigger': 'the shade position is changed. ',
+    'ShadingSystemEnabledTrigger': 'the curtain is closed. ',
+    'ShadingSystemDisabledTrigger': 'the curtain is opened. ',
+    'ShadeSetToTrigger': 'the curtain position is changed. ',
     'LightingSystemEnabledTrigger': 'the lights are turned on. ',
     'LightingSystemDisabledTrigger': 'the lights are turned off. ',
     'SensedLightingIncreasedTrigger': 'the lights are bright. ',
@@ -73,8 +73,8 @@ confirmDict = {
     'WindowFrameClosedTrigger': 'the windows are closed. ',
     'SecuritySystemEnabledTrigger': 'the security system is activated. ',
     'SecuritySystemDisabledTrigger': 'the security system is deactivated. ',
-    'AddedAlarmTrigger': 'an alarm is added. ',
-    'DeletedAlarmTrigger': 'an alarm is deleted. ',
+    'AddedAlarmTrigger': 'a notification is added. ',
+    'DeletedAlarmTrigger': 'a notification is deleted. ',
     'SensedNoiseLevelIncreasedTrigger': 'noise becomes loud. ',
     'SensedNoiseLevelDecreasedTrigger': 'noise becomes quiet. ',
     'SensedAirPressureIncreasedTrigger': 'the air pressure is high. ',
@@ -86,7 +86,7 @@ confirmDict = {
     'GPSEnterAreaTrigger': 'you enter the area. ',
     'GPSExitAreaTrigger': 'you leave the area. ',
     'EveryTimeTrigger': 'the time is ',
-    'WeatherConditionsTrigger': 'the weather condition is met. ',
+    'WeatherConditionsTrigger': 'the weather condition is raining. ',
     'ComputerTurnedOnTrigger': 'the computer is turned on. ',
     'ComputerTurnedOffTrigger': 'the computer is turned off. ',
     'VoiceCommandTrigger': 'the voice command is activated. '
@@ -163,19 +163,19 @@ def speak_add_command(m, resp=True):
     if firstAppend:
         firstAppend = False
         
-        ret += "Got it, tell me if you have more commands to add, or just say I'm done."
+        ret += "<break time='700ms'/> Got it, tell me if you have more commands to add, or just say I'm done."
     else:
         responses = [
-            "Okay, anything else to add?",
-            "Consider it done, anything else?",
-            "Added to the mashup, anything else?",
-            "Sure, is there anything else?",
+            "<break time='700ms'/> Okay, anything else to add?",
+            "<break tiem='700ms'/> Great, anything else?",
+            "<break time='700ms'/> Got it, anything else?",
+            "<break time='700ms'/> Sure, is there anything else?",
         ]
 
         if resp:
             ret += random.choice(responses)
 
-    return ret
+    return '<speak>' + ret + '</speak>'
 
 def confirm_init():
     global initialTriggerMet
