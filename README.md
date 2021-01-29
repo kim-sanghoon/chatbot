@@ -13,9 +13,10 @@ pip3 install -r requirements.txt
 
 ### Testing Environment
 - Python 3.5 with Flask==1.1.2
-<!-- - Valid SSL certificate is required with filename of `server.crt` and `server.key`. -->
+- Valid SSL certificate is required with filename of `server.crt` and `server.key`.
 - Import the agent in your dialogflow console, and configure the webhook settings.
 - Simply `sudo ./app.py` from your local environment.
+- Simply `./app.py --help` to see the usage.
 
 ### Descriptions
 - `app.py` : Webhook responses management.

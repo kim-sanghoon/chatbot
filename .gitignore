@@ -2,6 +2,6 @@
 /__pycache__
 .ipynb_checkpoints
 certbot-auto
-server.crt
-server.key
+/server.crt
+/server.key
 nohup.out
