@@ -17,7 +17,15 @@ pip3 install -r requirements.txt
 - Import the agent in your dialogflow console, and configure the webhook settings.
 - Simply `sudo ./app.py` from your local environment.
 
-### Descriptions
+### API Descriptions
+- Dialogflow webhook requests
+
+  - Method: `POST`
+  - URL: `/`
+  - Auth: `None`
+  - Parameters: `Required` Please refer [the Google webhook document](https://cloud.google.com/dialogflow/es/docs/fulfillment-webhook) for details.
+
+### File Descriptions
 - `app.py` : Webhook responses management.
 - `mashup.py` : Class definitions for mashup and each service.
 - `identifier2ont.py` : Converting user utterance to corresponding ontology definition.
