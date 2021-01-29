@@ -5,6 +5,12 @@
 - `single-utterance` branch is the baseline agent that was compared with CoMMA.
 - `video-figure` branch contains the realtime visualization tool (which is named `realtime-vis.ipynb`) and the dialogflow agent file.
 
+### Install
+
+```bash
+pip3 install -r requirements.txt
+```
+
 ### Testing Environment
 - Python 3.5 with Flask==1.1.2
 - Valid SSL certificate is required with filename of `server.crt` and `server.key`.

@@ -318,4 +318,6 @@ def main():
 
 
 if __name__ == "__main__":
-    app.run(host='0.0.0.0', port=443, ssl_context=('server.crt', 'server.key'))
+    # Let's prefer HTTP for development, and reverse-proxy it to HTTPS for production.
+    # app.run(host='0.0.0.0', port=443, ssl_context=('server.crt', 'server.key'))
+    app.run(host='0.0.0.0', port=9000)
